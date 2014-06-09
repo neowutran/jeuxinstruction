@@ -212,9 +212,9 @@ void print_cpu(Machine *pmach) {
 void simul(Machine *pmach, bool debug) {
     int execute = 1;
     while (execute) {
-        //pmach->_pc++;
-        execute = decode_execute(pmach, pmach->_text[pmach->_pc]);
-        trace("TRACE: Executing:", pmach, pmach->_text[pmach->_pc], pmach->_pc);
+        pmach->_pc = pmach->_pc + 1;
+        execute = decode_execute(pmach, pmach->_text[pmach->_pc - 1]);
+        trace("TRACE: Executing:", pmach, pmach->_text[pmach->_pc - 1], pmach->_pc - 1);
         if (debug) {
             debug = debug_ask(pmach);
         }
