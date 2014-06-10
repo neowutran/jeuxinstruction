@@ -18,9 +18,7 @@
  * \param datasize taille utile du segment de données
  * \param data le contenu initial du segment de texte
  */
-void load_program(Machine *pmach,
-        unsigned textsize, Instruction text[textsize],
-        unsigned datasize, Word data[datasize], unsigned dataend) {
+void load_program(Machine *pmach, unsigned textsize, Instruction text[textsize], unsigned datasize, Word data[datasize], unsigned dataend) {
 
     pmach->_textsize = textsize;
     pmach->_text = text;
@@ -73,11 +71,16 @@ void read_program(Machine *mach, const char *programfile) {
     fread(&datasize, sizeof (unsigned int), 1, program);
     fread(&dataend, sizeof (unsigned int), 1, program);
 
-    unsigned int text[textsize];
-    unsigned int data[datasize];
+    Instruction* text = malloc(sizeof (Instruction) * textsize);
+    Word *data = malloc(sizeof (Word) * textsize);
 
-    fread(text, sizeof (unsigned int), textsize, program);
-    fread(data, sizeof (unsigned int), dataend, program);
+    fread(text, sizeof (Instruction), textsize, program);
+    fread(data, sizeof (Word), datasize, program);
+    if (ferror(program) != 0) {
+        perror("machine");
+        exit(1);
+    }
+    fclose(program);
 
     load_program(mach, textsize, text, datasize, data, dataend);
 
@@ -96,6 +99,22 @@ void read_program(Machine *mach, const char *programfile) {
  * \param pmach la machine en cours d'exécution
  */
 void dump_memory(Machine *pmach) {
+
+    FILE * dump = fopen("dump.prog", "w");
+    if (dump == NULL) {
+        perror("machine");
+        exit(1);
+    }
+    fwrite(&pmach->_textsize, sizeof (unsigned int), 1, dump);
+    fwrite(&pmach->_datasize, sizeof (unsigned int), 1, dump);
+    fwrite(&pmach->_dataend, sizeof (unsigned int), 1, dump);
+    fwrite(pmach->_text, sizeof (unsigned int), pmach->_textsize, dump);
+    fwrite(pmach->_data, sizeof (unsigned int), pmach->_datasize, dump);
+    if (ferror(dump) != 0) {
+        perror("machine");
+        exit(1);
+    }
+    fclose(dump);
 
     printf("Instruction text[] = {\n\t");
     for (int i = 0; i < pmach->_textsize; i++) {
@@ -195,6 +214,7 @@ void print_cpu(Machine *pmach) {
         }
         printf("0x%08X %d\t", pmach->_registers[i], pmach->_registers[i]);
     }
+    printf("\n");
 
 }
 
@@ -213,8 +233,8 @@ void simul(Machine *pmach, bool debug) {
     int execute = 1;
     while (execute) {
         pmach->_pc = pmach->_pc + 1;
-        execute = decode_execute(pmach, pmach->_text[pmach->_pc - 1]);
         trace("TRACE: Executing:", pmach, pmach->_text[pmach->_pc - 1], pmach->_pc - 1);
+        execute = decode_execute(pmach, pmach->_text[pmach->_pc - 1]);
         if (debug) {
             debug = debug_ask(pmach);
         }
