@@ -269,7 +269,7 @@ bool pop(Machine *pmach, Instruction instr, unsigned addr)
 {
 	check_immediate(instr,addr); // vérifie que l'on est pas en immédiat, sinon erreur
 	unsigned int address = get_address(pmach, instr);
-	check_data_addr(pmach, address, addr);
+	check_seg_data(pmach, address, addr);
 	++pmach->_sp;
 	check_stack(pmach, addr);
 	pmach->_data[address] = pmach->_data[pmach->_sp]; //On met la valeur de la pile dans Data
@@ -279,32 +279,32 @@ bool pop(Machine *pmach, Instruction instr, unsigned addr)
 bool decode_execute(Machine *pmach, Instruction instr) {
 	switch (instr.instr_generic._cop) {
 		case ILLOP :
-			error(ERR_ILLEGAL, pmach->pc-1);
+			error(ERR_ILLEGAL, pmach->_pc-1);
 		case NOP :
 			return true;
 		case LOAD :
-			return load(pmach, instr, pmach->pc-1);
+			return load(pmach, instr, pmach->_pc-1);
 		case STORE :
-			return store(pmach, instr, pmach->pc-1);
+			return store(pmach, instr, pmach->_pc-1);
 		case ADD :
-			return add(pmach, instr, pmach->pc-1);
+			return add(pmach, instr, pmach->_pc-1);
 		case SUB :
-			return sub(pmach, instr, pmach->pc-1);
+			return sub(pmach, instr, pmach->_pc-1);
 		case BRANCH :
-			return branch(pmach, instr, pmach->pc-1);
+			return branch(pmach, instr, pmach->_pc-1);
 		case CALL :
-			return call(pmach, instr, pmach->pc-1);
+			return call(pmach, instr, pmach->_pc-1);
 		case RET :
-			return ret(pmach, instr, pmach->pc-1);
+			return ret(pmach, instr, pmach->_pc-1);
 		case PUSH :
-			return push(pmach, instr, pmach->pc-1);
+			return push(pmach, instr, pmach->_pc-1);
 		case POP :
-			return pop(pmach, instr, pmach->pc-1);
+			return pop(pmach, instr, pmach->_pc-1);
 		case HALT :
-			warning(WARN_HALT, pmach->pc-1);
+			warning(WARN_HALT, pmach->_pc-1);
 			return false;
 		default :
-			error(ERR_UNKNOWN, pmach->pc-1);
+			error(ERR_UNKNOWN, pmach->_pc-1);
 	}
 }
 
