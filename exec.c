@@ -1,4 +1,11 @@
+/*!
+ * \fichier exec.c
+ * \brief Exécution des instructions pour la simulation du processeur.
+ */
+
 #include "exec.h"
+#include "error.h"
+#include <stdio.h>
 
 //! retourne True si l'instruction est immédiate sinon false.
 /*!
@@ -10,6 +17,17 @@ bool is_immediate(Instruction instr, unsigned addr)
 	if (instr.instr_generic._immediate)
 		return true;
 	return false;
+}
+
+//! Vérifie que l'instruction n'est pas en immédiate sinon erreur
+/*!
+ * \param instr instruction en cours
+ * \param addr adresse de l'instruction
+ */
+void check_immediate(Instruction instr, unsigned addr) 
+{
+	if (is_immediate(instr,addr))
+		error(ERR_IMMEDIATE,addr);
 }
 
 //! Récupère l'adresse réelle, à partir d'un adressage indexé ou absolu.
@@ -37,12 +55,12 @@ void check_seg_data(Machine *pmach, unsigned int data_addr, unsigned addr)
 		error(ERR_SEGDATA, addr);
 }
 
-//! Met à jour CC selon la valeur de reg.
+//! Change la valeur de CC selon la valeur de reg.
 /*!
  * \param pmach machine en cours d'exécution
  * \param reg numéro de registre
  */
-void refresh_cc(Machine *pmach, unsigned int reg) 
+void change_cc(Machine *pmach, unsigned int reg) 
 {
 	if (reg < 0) //Si résultat nul
 	        pmach->_cc = CC_N;
@@ -52,7 +70,45 @@ void refresh_cc(Machine *pmach, unsigned int reg)
         	pmach->_cc = CC_Z;
 }
 
-//! Décode et exécute de l'instruction LOAD.
+//! Vérification de la condition de branchement.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param instr instruction en cours
+ */
+bool check_condition(Machine *pmach, Instruction instr, unsigned addr) 
+{
+	switch (instr.instr_generic._regcond) {
+	case NC: // Pas de condition
+		return true;
+	case EQ: // Egal à 0
+		return (pmach->_cc == CC_Z);
+	case NE: // Different de zero
+		return (pmach->_cc != CC_Z);
+	case GT: // Strictement positif
+		return (pmach->_cc == CC_P);
+	case GE: // Positif ou nul
+		return (pmach->_cc == CC_P || pmach->_cc == CC_Z);
+	case LT: // Strictement négatif
+		return (pmach->_cc == CC_N);
+	case LE: // Négatif ou nul
+		return (pmach->_cc == CC_N || pmach->_cc == CC_Z);
+	default:
+		error(ERR_CONDITION, addr);
+	}
+}
+
+//! Vérification que Stack Pointer (SP) ne dépasse pas la zone dédiée à la pile.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param addr adresse de l'instruction
+ */
+void check_stack(Machine *pmach, unsigned addr) 
+{
+	if (pmach->_sp < pmach->_dataend || pmach->_sp >= pmach->_datasize)
+		error(ERR_SEGSTACK,addr);
+}
+
+//! Décodage et exécution de l'instruction LOAD.
 //! Adressage immédiat, absolu et indexé pour la source.
 //! Il faut indiquer un registre de destination.
 /*!
@@ -61,55 +117,163 @@ void refresh_cc(Machine *pmach, unsigned int reg)
  * \param addr adresse de l'instruction en cours
  */
 bool load(Machine *pmach, Instruction instr, unsigned addr) {
-	if (is_immediate(instr,addr)) { // Si I = 1 : Immediat, on est en immediat
+	if (is_immediate(instr,addr)) { // Si I = 1 : Immediat, on est en immediat, on load directement la valeur dans le registre
 		pmach->_registers[instr.instr_generic._regcond] = instr.instr_immediate._value;
-	} else {
+	} else { // on va chercher la valeur dans data pour la mettre dans le registre
 		unsigned int address = get_address(pmach, instr);
 		check_seg_data(pmach, address, addr);
 		pmach->_registers[instr.instr_generic._regcond] = pmach->_data[address];
 	}
-	refresh_cc(pmach, pmach->_registers[instr.instr_generic._regcond]);
+	change_cc(pmach, pmach->_registers[instr.instr_generic._regcond]);
 	return true;
 }
 
-bool store(Machine *pmach, Instruction instr, unsigned addr) {
-
-
+//! Décodage et exécution de l'instruction STORE.
+//! Adressage absolu et indexé pour la destination.
+//! Indiquer un registre pour la source.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param instr instruction en cours
+ * \param addr adresse de l'instruction en cours
+ */
+bool store(Machine *pmach, Instruction instr, unsigned addr) 
+{
+	check_immediate(instr, addr); // vérifie que l'on est pas en immédiat, sinon erreur
+	unsigned int address = get_address(pmach, instr);
+	check_seg_data(pmach, address, addr);
+	pmach->_data[address] = pmach->_registers[instr.instr_generic._regcond]; // on stocke la valeur du registre dans data
+	return true;
 }
 
-bool add(Machine *pmach, Instruction instr, unsigned addr) {
-
-
+//! Décodage et exécution de l'instruction ADD.
+//! Adressage immédiat, absolu et indexé pour la source.
+//! Indiquer un registre pour la destination.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param instr instruction en cours
+ * \param addr adresse de l'instruction en cours
+ */
+bool add(Machine *pmach, Instruction instr, unsigned addr) 
+{
+	if (is_immediate(instr,addr)) { // Si I = 1 : Immediat, on est en immediat, on ajoute la valeur immédiatement
+		pmach->_registers[instr.instr_generic._regcond] += instr.instr_immediate._value;
+	} else { // on récupère la valeur dans data et on l'ajoute au registre
+		unsigned int address = get_address(pmach, instr);
+		check_seg_data(pmach, address, addr); 
+		pmach->_registers[instr.instr_generic._regcond] += pmach->_data[address]; 
+	}
+	change_cc(pmach,pmach->_registers[instr.instr_generic._regcond]);
+	return true;
 }
 
-bool sub(Machine *pmach, Instruction instr, unsigned addr) {
-
-
+//! Décodage et exécution de l'instruction SUB.
+//! Adressage immédiat, absolu et indexé pour la source.
+//! Indiquer un registre pour la destination.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param instr instruction en cours
+ * \param addr adresse de l'instruction en cours
+ */
+bool sub(Machine *pmach, Instruction instr,unsigned addr) 
+{
+	if (is_immediate(instr,addr)) { // Si I = 1 : Immediat, on est en immediat, on enlève directement la valeur
+		pmach->_registers[instr.instr_generic._regcond] -= instr.instr_immediate._value;
+	} else { // on récupère la valeur dans data et on la soustrait
+		unsigned int address = get_address(pmach, instr);
+		check_seg_data(pmach, address, addr); 
+		pmach->_registers[instr.instr_generic._regcond] -= pmach->_data[address];
+	}
+	change_cc(pmach,pmach->_registers[instr.instr_generic._regcond]);
+	return true;
 }
 
-bool branch(Machine *pmach, Instruction instr, unsigned addr) {
-
-
+//! Décodage et exécutution de l'instruction BRANCH.
+//! Adressage absolu et indexé pour l'adresse de l'instruction à exécuter.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param instr instruction en cours
+ * \param addr adresse de l'instruction en cours
+ */
+bool branch(Machine *pmach, Instruction instr, unsigned addr) 
+{
+	check_immediate(instr, addr); // vérifie que l'on est pas en immédiat, sinon erreur
+	if (check_condition(pmach, instr, addr)) {
+		unsigned int address = get_address(pmach, instr);
+		pmach->_pc = address; //on jump à la suite du programme
+	}
+	return true;
 }
 
-bool call(Machine *pmach, Instruction instr, unsigned addr) {
-
-
+//! Décodage et exécution de l'instruction CALL.
+//! Adressage absolu et indexé pour l'adresse du sous-programme.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param instr instruction en cours
+ * \param addr adresse de l'instruction en cours
+ */
+bool call(Machine *pmach, Instruction instr, unsigned addr) 
+{
+	check_immediate(instr, addr); // vérifie que l'on est pas en immédiat, sinon erreur
+	check_stack(pmach, addr);
+	
+	if (check_condition(pmach, instr, addr)) {
+		pmach->_data[pmach->_sp--] = pmach->_pc;
+		unsigned int address = get_address(pmach, instr);
+		pmach->_pc = address; // on jump a l'adresse du sous programme
+	}
+	return true;
 }
 
+//! Décodage et exécutution de l'instruction RET.
+//! RET est employé seul.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param instr instruction en cours
+ * \param addr adresse de l'instruction en cours
+ */
 bool ret(Machine *pmach, Instruction instr, unsigned addr) {
-
-
+	++pmach->_sp;
+	check_stack(pmach, addr);
+	pmach->_pc = pmach->_data[pmach->_sp]; //retour à l'endroit du programme on l'on était avant le CALL
+	return true;
 }
 
-bool push(Machine *pmach, Instruction instr, unsigned addr) {
-
-
+//! Décodage et exécution de l'instruction PUSH.
+//! Adresse immédiat, indexé et absolu.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param instr instruction en cours
+ * \param addr adresse de l'instruction en cours
+ */
+bool push(Machine *pmach, Instruction instr, unsigned addr) 
+{
+	check_stack(pmach, addr);
+	if (is_immediate(instr,addr)) { // Si I = 1 : Immediat, on est en immediat, on push directement la valeur
+		pmach->_data[pmach->_sp--] = instr.instr_immediate._value;
+	} else { // on récupère la valeur dans data et on la push
+		unsigned int address = get_address(pmach, instr);
+		check_seg_data(pmach, address, addr);
+		pmach->_data[pmach->_sp--] = pmach->_data[address];	
+	}
+	return true;
 }
 
-bool pop(Machine *pmach, Instruction instr, unsigned addr) {
-
-
+//! Décodage et exécution de l'instruction POP.
+//! Adresse absolue ou indexée.
+/*!
+ * \param pmach machine en cours d'exécution
+ * \param instr instruction en cours
+ * \param addr adresse de l'instruction en cours
+ */
+bool pop(Machine *pmach, Instruction instr, unsigned addr) 
+{
+	check_immediate(instr,addr); // vérifie que l'on est pas en immédiat, sinon erreur
+	unsigned int address = get_address(pmach, instr);
+	check_data_addr(pmach, address, addr);
+	++pmach->_sp;
+	check_stack(pmach, addr);
+	pmach->_data[address] = pmach->_data[pmach->_sp]; //On met la valeur de la pile dans Data
+	return true;
 }
 
 bool decode_execute(Machine *pmach, Instruction instr) {
