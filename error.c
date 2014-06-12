@@ -2,7 +2,6 @@
  * \file error.c
  * \brief Messages et codes d'erreurs.
  */
-
 #include "error.h"
 #include <stdio.h>
 #include <stdlib.h>
