@@ -1,7 +1,7 @@
 //-----------------
 // Instructions
 //-----------------
-        TEXT 30
+        TEXT 34
 
         // Programme principal
 main    EQU *
