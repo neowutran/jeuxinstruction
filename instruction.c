@@ -35,8 +35,8 @@ void print_instruction(Instruction instr, unsigned addr){
 	char *cop_name=cop_names[instr.instr_generic._cop];
 
 	//On la compare afin de savoir quoi afficher
-	//Si l'operation est HALT ou ILLOP, il suffit de l'afficher
-	if(strcmp(cop_name,"HALT")==0 || strcmp(cop_name,"ILLOP")==0){
+	//Si l'operation est HALT, ILLOP, NOP ou RET, il suffit de l'afficher
+	if(strcmp(cop_name,"HALT")==0 || strcmp(cop_name,"ILLOP")==0 || strcmp(cop_name,"NOP")==0 || strcmp(cop_name,"RET")==0){
 		printf("%s", cop_name);
 	}else if(!instr.instr_generic._immediate){	//si I=0 
 		//si X=0 : adressage direct
