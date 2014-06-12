@@ -10,7 +10,6 @@ bool debug_ask(Machine *pmach) {
 	char buff[2];
 	while (debug_mode) {
 		printf("DEBUG?");
-		fflush(stdin)
 		fgets(buff, 2, stdin);
 		int c;
 		while ((c=getchar()) != '\n' && c != EOF);
