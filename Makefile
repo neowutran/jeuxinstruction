@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------
-# Simulation d'un processeur simple
+# Simulation d'un processeur simple 
 #-------------------------------------------------------------------
 # (C) Jean-Paul Rigault --- Mai 2008-2014
 #-------------------------------------------------------------------
@@ -12,7 +12,7 @@ ifeq ($(UNAME), Darwin)
   ARCHNAME = macosx
 else ifeq ($(UNAME), Linux)
   CC = gcc
-  ARCH =
+  ARCH = 
   ARCHNAME = linux-$(shell uname -m)
 else
   $(error "Architecture non supportée: " $(UNAME))
@@ -30,7 +30,7 @@ DOXYGEN = doxygen
 HDR = $(wildcard *.h)
 
 # CHANGER LA DÉFINITION DE CETTE VARIABLE (USERSRC) POUR Y INDIQUER VOS PROPRES MODULES
-USERSRC = machine.c
+USERSRC = exec.c instruction.c
 USEROBJ = $(patsubst %.c,%.o,$(USERSRC))
 
 PROG = test_simul
@@ -40,7 +40,7 @@ LIB = libsimul.a
 
 all : depend.out $(PROG)
 
-$(PROG) : $(PROG).o $(USEROBJ) $(LIB)
+$(PROG) : $(PROG).o $(USEROBJ) $(LIB) 
 	$(CC) $(LDFLAGS) -o $@ $^
 
 # Cibles annexes
@@ -57,27 +57,27 @@ clean : all
 	-rm $(wildcard *.o) dump.bin
 
 clobber : .FORCE
-	-rm $(wildcard *.o) $(PROG) dump.bin depend.out
+	-rm $(wildcard *.o) $(PROG) dump.bin depend.out 
 
 clean_doc : .FORCE
 	-rm -rf doc
 
 # Cibles secondaires
 
-depend.out :
+depend.out : 
 	$(MKDEPEND) $(wildcard *.c) > depend.out
 
-.FORCE :
+.FORCE : 
 
-# Dépendances (le fichier depend.out est généré par "make depend"
-#
+# Dépendances (le fichier depend.out est généré par "make depend" 
+# 
 # Note: les dépendances peuvent être générées automatiquement par gcc. Ici
 # l'entrée "make depend" permet de créer un fichier qui les contient. Bien
 # entendu il *faut* réexécuter cette commande chaque fois que l'on modifie
 # l'agencement des fichiers sources : création, destruction, modification des
 # inclusions... En fait, ici, on recrée ce fichier à chaque invocation de make.
 
-depend :
+depend : 
 	-rm depend.out
 	$(MAKE) depend.out
 
