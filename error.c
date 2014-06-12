@@ -21,29 +21,29 @@ void error(Error err, unsigned addr){
 		printf("ERROR: ");
 		switch (err) {
 		case ERR_NOERROR:
-			printf("No error at adress 0x%x\n",addr);
+			printf("No error at adress 0x%04x\n",addr);
 			break;
 		case ERR_UNKNOWN:
-			printf("Unknown instruction 0x%x\n",addr);
+			printf("Unknown instruction 0x%04x\n",addr);
 			exit(1);
 		case ERR_ILLEGAL:
-			printf("Illegal instruction at address 0x%x\n",addr);
+			printf("Illegal instruction at address 0x%04x\n",addr);
 			exit(1);
 		case ERR_CONDITION:
-			printf("Illegal condition at adress 0x%x\n",addr);
+			printf("Illegal condition at adress 0x%04x\n",addr);
 			exit(1);
 		case ERR_IMMEDIATE:
-			printf("Immediate value forbidden at adress 0x%x\n",addr);
+			printf("Immediate value forbidden at adress 0x%04x\n",addr);
 			exit(1);
 		case ERR_SEGTEXT:
-			printf("Segmentation fault in text at address at 0x%08x\n",addr);
+			printf("Segmentation fault in text at address at 0x%04x\n",addr);
 			exit(1);
 		case ERR_SEGDATA:
-			printf("Segmentation fault in Data at adress 0x%x\n",addr);
+			printf("Segmentation fault in Data at adress 0x%04x\n",addr);
 			exit(1);
 		case ERR_SEGSTACK:
-			printf("Segmentation fault in stack at adress 0x%x\n",addr);
-			exit(1);
+			printf("Segmentation fault in stack at adress 0x%04x\n",addr);
+			exit(1);04x
 		default:
 			exit(0);
 		}
@@ -58,7 +58,7 @@ void error(Error err, unsigned addr){
 void warning(Warning warn, unsigned addr){
 	printf("WARNING: ");
 	if(warn ==  WARN_HALT){
-	printf("HALT reached at address at 0x%x\n",addr);
+	printf("HALT reached at address at 0x%04x\n",addr);
 }
 
 }
