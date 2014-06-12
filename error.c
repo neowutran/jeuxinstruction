@@ -43,7 +43,7 @@ void error(Error err, unsigned addr){
 			exit(1);
 		case ERR_SEGSTACK:
 			printf("Segmentation fault in stack at adress 0x%04x\n",addr);
-			exit(1);04x
+			exit(1);
 		default:
 			exit(0);
 		}
