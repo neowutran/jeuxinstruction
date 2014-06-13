@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+make: Nothing to be done for 'all'.
+=======
+make: *** No rule to make target 'libsimul.a', needed by 'test_simul'.  Stop.
+>>>>>>> dd6f8b3c58cbf8b37db7492eb786aa8ba0ee75ac

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
 <title>Simulateur du jeu d&#39;instructions d&#39;un processeur simple: Variables globale</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -32,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.7 -->
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
@@ -107,6 +107,12 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>ADD
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6acfcf145f2788bf340ff3f3098bc54909">instruction.h</a>
 </li>
+<li>add()
+: <a class="el" href="exec_8c.html#a7ee7713b6e85c2188ab02f2915de93f8">exec.c</a>
+</li>
+<li>affichage_registre()
+: <a class="el" href="instruction_8c.html#af0f58cfbd0ee82026e01d21fe68a3c4e">instruction.c</a>
+</li>
 </ul>
 
 
@@ -114,10 +120,16 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>BRANCH
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ad9b20a9207fb2cd3021b9eb0b7c6fe5e">instruction.h</a>
 </li>
+<li>branch()
+: <a class="el" href="exec_8c.html#a16b312c92b0fbfd48a29322bb499b737">exec.c</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>call()
+: <a class="el" href="exec_8c.html#ae92e2b60b587827a53e9eeda2d1ce875">exec.c</a>
+</li>
 <li>CALL
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6abd0ebc08c262bab82a1882256d2d66e8">instruction.h</a>
 </li>
@@ -133,6 +145,21 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>CC_Z
 : <a class="el" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f">machine.h</a>
 </li>
+<li>change_cc()
+: <a class="el" href="exec_8c.html#affda555699481b52022b53823658784e">exec.c</a>
+</li>
+<li>check_condition()
+: <a class="el" href="exec_8c.html#a161ce21cc67c2921078bae84ed79774c">exec.c</a>
+</li>
+<li>check_immediate()
+: <a class="el" href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">exec.c</a>
+</li>
+<li>check_seg_data()
+: <a class="el" href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">exec.c</a>
+</li>
+<li>check_stack()
+: <a class="el" href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">exec.c</a>
+</li>
 <li>Code_Op
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6">instruction.h</a>
 </li>
@@ -143,10 +170,12 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3">machine.h</a>
 </li>
 <li>condition_names
-: <a class="el" href="instruction_8h.html#a4cf35570c7b75e596c642031544688e0">instruction.h</a>
+: <a class="el" href="instruction_8c.html#a4cf35570c7b75e596c642031544688e0">instruction.c</a>
+, <a class="el" href="instruction_8h.html#a4cf35570c7b75e596c642031544688e0">instruction.h</a>
 </li>
 <li>cop_names
-: <a class="el" href="instruction_8h.html#ae5e0c6bef1ffc3adc867e3ea4b9a57c3">instruction.h</a>
+: <a class="el" href="instruction_8c.html#ae5e0c6bef1ffc3adc867e3ea4b9a57c3">instruction.c</a>
+, <a class="el" href="instruction_8h.html#ae5e0c6bef1ffc3adc867e3ea4b9a57c3">instruction.h</a>
 </li>
 </ul>
 
@@ -165,20 +194,23 @@ $(document).ready(function(){initNavTree('globals.html','');});
 , <a class="el" href="prog__simple_8c.html#ad74734ae58f284f6cc955dfecf50f0d0">prog_simple.c</a>
 </li>
 <li>datasize
-: <a class="el" href="prog__simple_8c.html#aaf62fcfcec5bdcaf147f70c32398ab32">prog_simple.c</a>
-, <a class="el" href="prog__subroutine_8c.html#aaf62fcfcec5bdcaf147f70c32398ab32">prog_subroutine.c</a>
+: <a class="el" href="prog__simple-bin_8c.html#a5c7949e884a8b9b3d1ab9f070267bf33">prog_simple-bin.c</a>
+, <a class="el" href="prog__simple_8c.html#aaf62fcfcec5bdcaf147f70c32398ab32">prog_simple.c</a>
 , <a class="el" href="prog__subroutine-bin_8c.html#a5c7949e884a8b9b3d1ab9f070267bf33">prog_subroutine-bin.c</a>
-, <a class="el" href="prog__simple-bin_8c.html#a5c7949e884a8b9b3d1ab9f070267bf33">prog_simple-bin.c</a>
 , <a class="el" href="test__simul_8c.html#aaf62fcfcec5bdcaf147f70c32398ab32">test_simul.c</a>
+, <a class="el" href="prog__subroutine_8c.html#aaf62fcfcec5bdcaf147f70c32398ab32">prog_subroutine.c</a>
 </li>
 <li>debug_ask()
 : <a class="el" href="debug_8h.html#a3a88fdc680b7a1ae8c4c7c8ddee730ab">debug.h</a>
+, <a class="el" href="debug_8c.html#a3a88fdc680b7a1ae8c4c7c8ddee730ab">debug.c</a>
 </li>
 <li>decode_execute()
-: <a class="el" href="exec_8h.html#a41471ced34d27777447c2609173af7de">exec.h</a>
+: <a class="el" href="exec_8c.html#a41471ced34d27777447c2609173af7de">exec.c</a>
+, <a class="el" href="exec_8h.html#a41471ced34d27777447c2609173af7de">exec.h</a>
 </li>
 <li>dump_memory()
-: <a class="el" href="machine_8h.html#aa69650bbdba0125402a22c4451755412">machine.h</a>
+: <a class="el" href="machine_8c.html#aa69650bbdba0125402a22c4451755412">machine.c</a>
+, <a class="el" href="machine_8h.html#aa69650bbdba0125402a22c4451755412">machine.h</a>
 </li>
 </ul>
 
@@ -211,11 +243,14 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>ERR_UNKNOWN
 : <a class="el" href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5a5c708decdcbd7d8c9fddd8d9e75828a1">error.h</a>
 </li>
+<li>error()
+: <a class="el" href="error_8h.html#a531bb138b38aef758b45a442aa53938a">error.h</a>
+</li>
 <li>Error
 : <a class="el" href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5">error.h</a>
 </li>
 <li>error()
-: <a class="el" href="error_8h.html#a531bb138b38aef758b45a442aa53938a">error.h</a>
+: <a class="el" href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error.c</a>
 </li>
 </ul>
 
@@ -223,6 +258,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>GE
 : <a class="el" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a558711b4a2a25070b970d85f5926d5ce">instruction.h</a>
+</li>
+<li>get_address()
+: <a class="el" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">exec.c</a>
 </li>
 <li>GT
 : <a class="el" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a12f5476fa04803e6cc72f2198730d892">instruction.h</a>
@@ -241,6 +279,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>ILLOP
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ad1bcea5caa46727ab4e411cffaa236f2">instruction.h</a>
 </li>
+<li>is_immediate()
+: <a class="el" href="exec_8c.html#aee58f0bd338aac461910322697938e01">exec.c</a>
+</li>
 </ul>
 
 
@@ -248,11 +289,15 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>LE
 : <a class="el" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a662ed4b51721a45f07d645d4ca099a61">instruction.h</a>
 </li>
+<li>load()
+: <a class="el" href="exec_8c.html#a3ffc341e4de6e5d18c2aaa75bb1d1bd4">exec.c</a>
+</li>
 <li>LOAD
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a972dbcdf74cff71e20bdcfb53be9c391">instruction.h</a>
 </li>
 <li>load_program()
-: <a class="el" href="machine_8h.html#a9ac26e6f927cf2956823b4f9588d44df">machine.h</a>
+: <a class="el" href="machine_8c.html#a9ac26e6f927cf2956823b4f9588d44df">machine.c</a>
+, <a class="el" href="machine_8h.html#a9ac26e6f927cf2956823b4f9588d44df">machine.h</a>
 </li>
 <li>LT
 : <a class="el" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a486aa221ceeeac475326e85d3d37f571">instruction.h</a>
@@ -284,46 +329,67 @@ $(document).ready(function(){initNavTree('globals.html','');});
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>pop()
+: <a class="el" href="exec_8c.html#aee15e6caec7d046384f6c7832fd5f8b1">exec.c</a>
+</li>
 <li>POP
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a061dcf4785583d8653942f2d252174fa">instruction.h</a>
 </li>
 <li>print_cpu()
 : <a class="el" href="machine_8h.html#a87cfff30238b966cfc3c0c416d7076e9">machine.h</a>
+, <a class="el" href="machine_8c.html#a87cfff30238b966cfc3c0c416d7076e9">machine.c</a>
 </li>
 <li>print_data()
-: <a class="el" href="machine_8h.html#a549be6eaf631d871e9357513c748640d">machine.h</a>
+: <a class="el" href="machine_8c.html#a549be6eaf631d871e9357513c748640d">machine.c</a>
+, <a class="el" href="machine_8h.html#a549be6eaf631d871e9357513c748640d">machine.h</a>
 </li>
 <li>print_instruction()
 : <a class="el" href="instruction_8h.html#a437080d5e8c504588a47d0dba468492f">instruction.h</a>
+, <a class="el" href="instruction_8c.html#a437080d5e8c504588a47d0dba468492f">instruction.c</a>
 </li>
 <li>print_program()
 : <a class="el" href="machine_8h.html#aba3ce4987ef379073d9d3f31debf89e7">machine.h</a>
+, <a class="el" href="machine_8c.html#aba3ce4987ef379073d9d3f31debf89e7">machine.c</a>
 </li>
 <li>PUSH
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ad263caec619c4d99e4684ba0fabd9493">instruction.h</a>
+</li>
+<li>push()
+: <a class="el" href="exec_8c.html#a8ffee845fd1b2304ae12874ab95b13a3">exec.c</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>read_program()
-: <a class="el" href="machine_8h.html#ac59b88844961c2479108151e24dd555a">machine.h</a>
+: <a class="el" href="machine_8c.html#ac59b88844961c2479108151e24dd555a">machine.c</a>
+, <a class="el" href="machine_8h.html#ac59b88844961c2479108151e24dd555a">machine.h</a>
 </li>
 <li>RET
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ab2510768eaba5e52ba71678e19a65464">instruction.h</a>
+</li>
+<li>ret()
+: <a class="el" href="exec_8c.html#acfdb4470feb4f92a231c3314185c9f4a">exec.c</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>simul()
-: <a class="el" href="machine_8h.html#ad0bfa0ce7434b963eea888d7b847ac3b">machine.h</a>
+: <a class="el" href="machine_8c.html#ad0bfa0ce7434b963eea888d7b847ac3b">machine.c</a>
+, <a class="el" href="machine_8h.html#ad0bfa0ce7434b963eea888d7b847ac3b">machine.h</a>
 </li>
 <li>STORE
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6afeb01cb4572ba190cd7932e49446c480">instruction.h</a>
 </li>
+<li>store()
+: <a class="el" href="exec_8c.html#a4f4f15617a93854e66e215b1b5976385">exec.c</a>
+</li>
 <li>SUB
 : <a class="el" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a12b733d4941495e86811fe6ceeeff9da">instruction.h</a>
+</li>
+<li>sub()
+: <a class="el" href="exec_8c.html#a3f80bd12c3f294a72d93d559f5c238ca">exec.c</a>
 </li>
 </ul>
 
@@ -337,14 +403,15 @@ $(document).ready(function(){initNavTree('globals.html','');});
 , <a class="el" href="prog__subroutine_8c.html#a53ae7c86b11d9a664628491ba41ca09d">prog_subroutine.c</a>
 </li>
 <li>textsize
-: <a class="el" href="prog__subroutine_8c.html#ab06365569505a01a31c5b0da6227d724">prog_subroutine.c</a>
-, <a class="el" href="prog__subroutine-bin_8c.html#a09c9805cec0364d715497e6564245c48">prog_subroutine-bin.c</a>
-, <a class="el" href="prog__simple-bin_8c.html#a09c9805cec0364d715497e6564245c48">prog_simple-bin.c</a>
-, <a class="el" href="test__simul_8c.html#ab06365569505a01a31c5b0da6227d724">test_simul.c</a>
+: <a class="el" href="prog__subroutine-bin_8c.html#a09c9805cec0364d715497e6564245c48">prog_subroutine-bin.c</a>
 , <a class="el" href="prog__simple_8c.html#ab06365569505a01a31c5b0da6227d724">prog_simple.c</a>
+, <a class="el" href="prog__subroutine_8c.html#ab06365569505a01a31c5b0da6227d724">prog_subroutine.c</a>
+, <a class="el" href="test__simul_8c.html#ab06365569505a01a31c5b0da6227d724">test_simul.c</a>
+, <a class="el" href="prog__simple-bin_8c.html#a09c9805cec0364d715497e6564245c48">prog_simple-bin.c</a>
 </li>
 <li>trace()
 : <a class="el" href="exec_8h.html#aae353f8fd7ccdbebd6c37fc0f75d12d3">exec.h</a>
+, <a class="el" href="exec_8c.html#aae353f8fd7ccdbebd6c37fc0f75d12d3">exec.c</a>
 </li>
 </ul>
 
@@ -353,11 +420,12 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>WARN_HALT
 : <a class="el" href="error_8h.html#af6ea07812363481c623a23ea26fbf8eda5a5baa88988dd74ee8359d6e504c6d77">error.h</a>
 </li>
-<li>warning()
-: <a class="el" href="error_8h.html#aec2872edfc57849ea2557178dc2b2673">error.h</a>
-</li>
 <li>Warning
 : <a class="el" href="error_8h.html#af6ea07812363481c623a23ea26fbf8ed">error.h</a>
+</li>
+<li>warning()
+: <a class="el" href="error_8h.html#aec2872edfc57849ea2557178dc2b2673">error.h</a>
+, <a class="el" href="error_8c.html#aec2872edfc57849ea2557178dc2b2673">error.c</a>
 </li>
 <li>Word
 : <a class="el" href="instruction_8h.html#a0b5b15ce5f3a75b5dd0de6643cd3d958">instruction.h</a>
@@ -368,9 +436,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Mercredi 4 Juin 2014 08:58:05 pour Simulateur du jeu d&#39;instructions d&#39;un processeur simple par
+    <li class="footer">Généré le Vendredi 13 Juin 2014 14:13:56 pour Simulateur du jeu d&#39;instructions d&#39;un processeur simple par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
 </div>
 </body>

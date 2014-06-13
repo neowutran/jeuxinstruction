@@ -1,0 +1,1635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Simulateur du jeu d&#39;instructions d&#39;un processeur simple: Référence du fichier exec.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Simulateur du jeu d&#39;instructions d&#39;un processeur simple
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.7 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('exec_8c.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier exec.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="exec_8h_source.html">exec.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error_8h_source.html">error.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Graphe des dépendances par inclusion de exec.c:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c__incl.png" border="0" usemap="#exec_8c" alt=""/></div>
+<map name="exec_8c" id="exec_8c">
+</map>
+</div>
+</div>
+<p><a href="exec_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aee58f0bd338aac461910322697938e01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a> (<a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="memdesc:aee58f0bd338aac461910322697938e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exécution des instructions pour la simulation du processeur.  <a href="#aee58f0bd338aac461910322697938e01">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aee58f0bd338aac461910322697938e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae6d0305934052f93dcb6cdce7d293bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">check_immediate</a> (<a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="memdesc:aae6d0305934052f93dcb6cdce7d293bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que l'instruction n'est pas en immédiate sinon erreur.  <a href="#aae6d0305934052f93dcb6cdce7d293bf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aae6d0305934052f93dcb6cdce7d293bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e5d79846ee7bfd563fb1b7939c7546b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr)</td></tr>
+<tr class="memdesc:a1e5d79846ee7bfd563fb1b7939c7546b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère l'adresse réelle, à partir d'un adressage indexé ou absolu.  <a href="#a1e5d79846ee7bfd563fb1b7939c7546b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1e5d79846ee7bfd563fb1b7939c7546b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259f1da450e59303ef7d8f555009d870"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, unsigned int data_addr, unsigned addr)</td></tr>
+<tr class="memdesc:a259f1da450e59303ef7d8f555009d870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie qu'il n'y a pas d'ERR_SEGDATA sur le tableau des données.  <a href="#a259f1da450e59303ef7d8f555009d870">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a259f1da450e59303ef7d8f555009d870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affda555699481b52022b53823658784e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#affda555699481b52022b53823658784e">change_cc</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, unsigned int reg)</td></tr>
+<tr class="memdesc:affda555699481b52022b53823658784e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change la valeur de CC selon la valeur de reg.  <a href="#affda555699481b52022b53823658784e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:affda555699481b52022b53823658784e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161ce21cc67c2921078bae84ed79774c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a161ce21cc67c2921078bae84ed79774c">check_condition</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="memdesc:a161ce21cc67c2921078bae84ed79774c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérification de la condition de branchement.  <a href="#a161ce21cc67c2921078bae84ed79774c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a161ce21cc67c2921078bae84ed79774c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3c7b86d834d27ad12ef08f7478ac57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">check_stack</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, unsigned addr)</td></tr>
+<tr class="memdesc:a8f3c7b86d834d27ad12ef08f7478ac57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérification que Stack Pointer (SP) ne dépasse pas la zone dédiée à la pile.  <a href="#a8f3c7b86d834d27ad12ef08f7478ac57">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8f3c7b86d834d27ad12ef08f7478ac57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ffc341e4de6e5d18c2aaa75bb1d1bd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a3ffc341e4de6e5d18c2aaa75bb1d1bd4">load</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="separator:a3ffc341e4de6e5d18c2aaa75bb1d1bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4f15617a93854e66e215b1b5976385"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a4f4f15617a93854e66e215b1b5976385">store</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="separator:a4f4f15617a93854e66e215b1b5976385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee7713b6e85c2188ab02f2915de93f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a7ee7713b6e85c2188ab02f2915de93f8">add</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="separator:a7ee7713b6e85c2188ab02f2915de93f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f80bd12c3f294a72d93d559f5c238ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a3f80bd12c3f294a72d93d559f5c238ca">sub</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="separator:a3f80bd12c3f294a72d93d559f5c238ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b312c92b0fbfd48a29322bb499b737"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a16b312c92b0fbfd48a29322bb499b737">branch</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="separator:a16b312c92b0fbfd48a29322bb499b737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92e2b60b587827a53e9eeda2d1ce875"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#ae92e2b60b587827a53e9eeda2d1ce875">call</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="separator:ae92e2b60b587827a53e9eeda2d1ce875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfdb4470feb4f92a231c3314185c9f4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#acfdb4470feb4f92a231c3314185c9f4a">ret</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="separator:acfdb4470feb4f92a231c3314185c9f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ffee845fd1b2304ae12874ab95b13a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a8ffee845fd1b2304ae12874ab95b13a3">push</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="separator:a8ffee845fd1b2304ae12874ab95b13a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee15e6caec7d046384f6c7832fd5f8b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#aee15e6caec7d046384f6c7832fd5f8b1">pop</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="separator:aee15e6caec7d046384f6c7832fd5f8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41471ced34d27777447c2609173af7de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a41471ced34d27777447c2609173af7de">decode_execute</a> (<a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr)</td></tr>
+<tr class="memdesc:a41471ced34d27777447c2609173af7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Décodage et exécution d'une instruction.  <a href="#a41471ced34d27777447c2609173af7de">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a41471ced34d27777447c2609173af7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae353f8fd7ccdbebd6c37fc0f75d12d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#aae353f8fd7ccdbebd6c37fc0f75d12d3">trace</a> (const char *msg, <a class="el" href="structMachine.html">Machine</a> *pmach, <a class="el" href="unionInstruction.html">Instruction</a> instr, unsigned addr)</td></tr>
+<tr class="memdesc:aae353f8fd7ccdbebd6c37fc0f75d12d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trace de l'exécution.  <a href="#aae353f8fd7ccdbebd6c37fc0f75d12d3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aae353f8fd7ccdbebd6c37fc0f75d12d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a7ee7713b6e85c2188ab02f2915de93f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Décodage et exécution de l'instruction ADD. Adressage immédiat, absolu et indexé pour la source. Indiquer un registre pour la destination.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00156">156</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00076">Machine::_data</a>, <a class="el" href="instruction_8h_source.html#l00063">Instruction::_regcond</a>, <a class="el" href="machine_8h_source.html#l00084">Machine::_registers</a>, <a class="el" href="instruction_8h_source.html#l00084">Instruction::_value</a>, <a class="el" href="exec_8c_source.html#l00063">change_cc()</a>, <a class="el" href="exec_8c_source.html#l00052">check_seg_data()</a>, <a class="el" href="exec_8c_source.html#l00038">get_address()</a>, <a class="el" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a>, <a class="el" href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">Instruction::instr_immediate</a>, et <a class="el" href="exec_8c_source.html#l00015">is_immediate()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00279">decode_execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a>(instr,addr)) { <span class="comment">// Si I = 1 : Immediat, on est en immediat, on ajoute la valeur immédiatement</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>] += instr.<a class="code" href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">instr_immediate</a>.<a class="code" href="unionInstruction.html#aa0cc705f1610955cf6ac0b15efbcca8a">_value</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    } <span class="keywordflow">else</span> { <span class="comment">// on récupère la valeur dans data et on l&#39;ajoute au registre</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> address = <a class="code" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a>(pmach, instr);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a>(pmach, address, addr); </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>] += pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[address]; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="exec_8c.html#affda555699481b52022b53823658784e">change_cc</a>(pmach,pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>]);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_a1e5d79846ee7bfd563fb1b7939c7546b"><div class="ttname"><a href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a></div><div class="ttdeci">unsigned int get_address(Machine *pmach, Instruction instr)</div><div class="ttdoc">Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00038">exec.c:38</a></div></div>
+<div class="ttc" id="unionInstruction_html_abe0842841a99720d36796e4ab9baafe0"><div class="ttname"><a href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">Instruction::instr_immediate</a></div><div class="ttdeci">struct Instruction::@2 instr_immediate</div><div class="ttdoc">Format d&#39;une instruction à valeur immédiate. </div></div>
+<div class="ttc" id="unionInstruction_html_aa0cc705f1610955cf6ac0b15efbcca8a"><div class="ttname"><a href="unionInstruction.html#aa0cc705f1610955cf6ac0b15efbcca8a">Instruction::_value</a></div><div class="ttdeci">signed int _value</div><div class="ttdoc">Valeur immédiate. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00084">instruction.h:84</a></div></div>
+<div class="ttc" id="structMachine_html_ab4a927b1e214bd40d2406f1080eaa6c4"><div class="ttname"><a href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">Machine::_registers</a></div><div class="ttdeci">Word _registers[NREGISTERS]</div><div class="ttdoc">Registres généraux (accumulateurs) </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00084">machine.h:84</a></div></div>
+<div class="ttc" id="unionInstruction_html_a8f5f38c91d2c3443dcd962101bfe19e2"><div class="ttname"><a href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">Instruction::_regcond</a></div><div class="ttdeci">unsigned _regcond</div><div class="ttdoc">Numéro de registre ou condition. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00063">instruction.h:63</a></div></div>
+<div class="ttc" id="exec_8c_html_aee58f0bd338aac461910322697938e01"><div class="ttname"><a href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a></div><div class="ttdeci">bool is_immediate(Instruction instr, unsigned addr)</div><div class="ttdoc">Exécution des instructions pour la simulation du processeur. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00015">exec.c:15</a></div></div>
+<div class="ttc" id="exec_8c_html_affda555699481b52022b53823658784e"><div class="ttname"><a href="exec_8c.html#affda555699481b52022b53823658784e">change_cc</a></div><div class="ttdeci">void change_cc(Machine *pmach, unsigned int reg)</div><div class="ttdoc">Change la valeur de CC selon la valeur de reg. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00063">exec.c:63</a></div></div>
+<div class="ttc" id="structMachine_html_ac2949056c217e69a8efe6a114d2ac2b0"><div class="ttname"><a href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">Machine::_data</a></div><div class="ttdeci">Word * _data</div><div class="ttdoc">Mémoire de données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00076">machine.h:76</a></div></div>
+<div class="ttc" id="unionInstruction_html_a5903d65905a4fd4f8c917ed17d9d9211"><div class="ttname"><a href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a></div><div class="ttdeci">struct Instruction::@0 instr_generic</div><div class="ttdoc">Format générique : les premiers champs sont communs. </div></div>
+<div class="ttc" id="exec_8c_html_a259f1da450e59303ef7d8f555009d870"><div class="ttname"><a href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a></div><div class="ttdeci">void check_seg_data(Machine *pmach, unsigned int data_addr, unsigned addr)</div><div class="ttdoc">Vérifie qu&#39;il n&#39;y a pas d&#39;ERR_SEGDATA sur le tableau des données. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00052">exec.c:52</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a7ee7713b6e85c2188ab02f2915de93f8_cgraph.png" border="0" usemap="#exec_8c_a7ee7713b6e85c2188ab02f2915de93f8_cgraph" alt=""/></div>
+<map name="exec_8c_a7ee7713b6e85c2188ab02f2915de93f8_cgraph" id="exec_8c_a7ee7713b6e85c2188ab02f2915de93f8_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a7ee7713b6e85c2188ab02f2915de93f8_icgraph.png" border="0" usemap="#exec_8c_a7ee7713b6e85c2188ab02f2915de93f8_icgraph" alt=""/></div>
+<map name="exec_8c_a7ee7713b6e85c2188ab02f2915de93f8_icgraph" id="exec_8c_a7ee7713b6e85c2188ab02f2915de93f8_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a16b312c92b0fbfd48a29322bb499b737"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool branch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Décodage et exécutution de l'instruction BRANCH. Adressage absolu et indexé pour l'adresse de l'instruction à exécuter.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00197">197</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00082">Machine::_pc</a>, <a class="el" href="exec_8c_source.html#l00078">check_condition()</a>, <a class="el" href="exec_8c_source.html#l00027">check_immediate()</a>, et <a class="el" href="exec_8c_source.html#l00038">get_address()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00279">decode_execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">check_immediate</a>(instr, addr); <span class="comment">// vérifie que l&#39;on est pas en immédiat, sinon erreur</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="exec_8c.html#a161ce21cc67c2921078bae84ed79774c">check_condition</a>(pmach, instr, addr)) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> address = <a class="code" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a>(pmach, instr);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a> = address; <span class="comment">//on jump à la suite du programme</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_a1e5d79846ee7bfd563fb1b7939c7546b"><div class="ttname"><a href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a></div><div class="ttdeci">unsigned int get_address(Machine *pmach, Instruction instr)</div><div class="ttdoc">Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00038">exec.c:38</a></div></div>
+<div class="ttc" id="structMachine_html_a1b3345874b1ade4324f16f3e03944675"><div class="ttname"><a href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">Machine::_pc</a></div><div class="ttdeci">unsigned _pc</div><div class="ttdoc">Compteur ordinal. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00082">machine.h:82</a></div></div>
+<div class="ttc" id="exec_8c_html_aae6d0305934052f93dcb6cdce7d293bf"><div class="ttname"><a href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">check_immediate</a></div><div class="ttdeci">void check_immediate(Instruction instr, unsigned addr)</div><div class="ttdoc">Vérifie que l&#39;instruction n&#39;est pas en immédiate sinon erreur. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00027">exec.c:27</a></div></div>
+<div class="ttc" id="exec_8c_html_a161ce21cc67c2921078bae84ed79774c"><div class="ttname"><a href="exec_8c.html#a161ce21cc67c2921078bae84ed79774c">check_condition</a></div><div class="ttdeci">bool check_condition(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdoc">Vérification de la condition de branchement. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00078">exec.c:78</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a16b312c92b0fbfd48a29322bb499b737_cgraph.png" border="0" usemap="#exec_8c_a16b312c92b0fbfd48a29322bb499b737_cgraph" alt=""/></div>
+<map name="exec_8c_a16b312c92b0fbfd48a29322bb499b737_cgraph" id="exec_8c_a16b312c92b0fbfd48a29322bb499b737_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a16b312c92b0fbfd48a29322bb499b737_icgraph.png" border="0" usemap="#exec_8c_a16b312c92b0fbfd48a29322bb499b737_icgraph" alt=""/></div>
+<map name="exec_8c_a16b312c92b0fbfd48a29322bb499b737_icgraph" id="exec_8c_a16b312c92b0fbfd48a29322bb499b737_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae92e2b60b587827a53e9eeda2d1ce875"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool call </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Décodage et exécution de l'instruction CALL. Adressage absolu et indexé pour l'adresse du sous-programme.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00214">214</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00076">Machine::_data</a>, <a class="el" href="machine_8h_source.html#l00082">Machine::_pc</a>, <a class="el" href="exec_8c_source.html#l00078">check_condition()</a>, <a class="el" href="exec_8c_source.html#l00027">check_immediate()</a>, <a class="el" href="exec_8c_source.html#l00105">check_stack()</a>, et <a class="el" href="exec_8c_source.html#l00038">get_address()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00279">decode_execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;{</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">check_immediate</a>(instr, addr); <span class="comment">// vérifie que l&#39;on est pas en immédiat, sinon erreur</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">check_stack</a>(pmach, addr);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="exec_8c.html#a161ce21cc67c2921078bae84ed79774c">check_condition</a>(pmach, instr, addr)) {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[pmach-&gt;_sp--] = pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> address = <a class="code" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a>(pmach, instr);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a> = address; <span class="comment">// on jump a l&#39;adresse du sous programme</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_a1e5d79846ee7bfd563fb1b7939c7546b"><div class="ttname"><a href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a></div><div class="ttdeci">unsigned int get_address(Machine *pmach, Instruction instr)</div><div class="ttdoc">Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00038">exec.c:38</a></div></div>
+<div class="ttc" id="exec_8c_html_a8f3c7b86d834d27ad12ef08f7478ac57"><div class="ttname"><a href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">check_stack</a></div><div class="ttdeci">void check_stack(Machine *pmach, unsigned addr)</div><div class="ttdoc">Vérification que Stack Pointer (SP) ne dépasse pas la zone dédiée à la pile. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00105">exec.c:105</a></div></div>
+<div class="ttc" id="structMachine_html_a1b3345874b1ade4324f16f3e03944675"><div class="ttname"><a href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">Machine::_pc</a></div><div class="ttdeci">unsigned _pc</div><div class="ttdoc">Compteur ordinal. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00082">machine.h:82</a></div></div>
+<div class="ttc" id="structMachine_html_ac2949056c217e69a8efe6a114d2ac2b0"><div class="ttname"><a href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">Machine::_data</a></div><div class="ttdeci">Word * _data</div><div class="ttdoc">Mémoire de données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00076">machine.h:76</a></div></div>
+<div class="ttc" id="exec_8c_html_aae6d0305934052f93dcb6cdce7d293bf"><div class="ttname"><a href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">check_immediate</a></div><div class="ttdeci">void check_immediate(Instruction instr, unsigned addr)</div><div class="ttdoc">Vérifie que l&#39;instruction n&#39;est pas en immédiate sinon erreur. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00027">exec.c:27</a></div></div>
+<div class="ttc" id="exec_8c_html_a161ce21cc67c2921078bae84ed79774c"><div class="ttname"><a href="exec_8c.html#a161ce21cc67c2921078bae84ed79774c">check_condition</a></div><div class="ttdeci">bool check_condition(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdoc">Vérification de la condition de branchement. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00078">exec.c:78</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_ae92e2b60b587827a53e9eeda2d1ce875_cgraph.png" border="0" usemap="#exec_8c_ae92e2b60b587827a53e9eeda2d1ce875_cgraph" alt=""/></div>
+<map name="exec_8c_ae92e2b60b587827a53e9eeda2d1ce875_cgraph" id="exec_8c_ae92e2b60b587827a53e9eeda2d1ce875_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_ae92e2b60b587827a53e9eeda2d1ce875_icgraph.png" border="0" usemap="#exec_8c_ae92e2b60b587827a53e9eeda2d1ce875_icgraph" alt=""/></div>
+<map name="exec_8c_ae92e2b60b587827a53e9eeda2d1ce875_icgraph" id="exec_8c_ae92e2b60b587827a53e9eeda2d1ce875_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="affda555699481b52022b53823658784e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void change_cc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>reg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change la valeur de CC selon la valeur de reg. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">reg</td><td>numéro de registre </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00063">63</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00083">Machine::_cc</a>, <a class="el" href="machine_8h_source.html#l00031">CC_N</a>, <a class="el" href="machine_8h_source.html#l00030">CC_P</a>, et <a class="el" href="machine_8h_source.html#l00029">CC_Z</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00156">add()</a>, <a class="el" href="exec_8c_source.html#l00119">load()</a>, et <a class="el" href="exec_8c_source.html#l00177">sub()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (reg &lt; 0) <span class="comment">//Si résultat nul</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> = <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a3c6fed66f14c571f360998834734cf3b">CC_N</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (reg &gt; 0) <span class="comment">// positif</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> = <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3af95cd91008581d4a445a565d66206a3c">CC_P</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">else</span> <span class="comment">// zéro</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> = <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f">CC_Z</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="ttc" id="machine_8h_html_a4bc92b6f72076bb5dd651a143f58a2c3af95cd91008581d4a445a565d66206a3c"><div class="ttname"><a href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3af95cd91008581d4a445a565d66206a3c">CC_P</a></div><div class="ttdoc">Résultat positif. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00030">machine.h:30</a></div></div>
+<div class="ttc" id="machine_8h_html_a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f"><div class="ttname"><a href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f">CC_Z</a></div><div class="ttdoc">Résultat nul. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00029">machine.h:29</a></div></div>
+<div class="ttc" id="structMachine_html_adbb793b4331ed11783001895c76b6d4c"><div class="ttname"><a href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">Machine::_cc</a></div><div class="ttdeci">Condition_Code _cc</div><div class="ttdoc">Code condition : signe de la dernière opération. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00083">machine.h:83</a></div></div>
+<div class="ttc" id="machine_8h_html_a4bc92b6f72076bb5dd651a143f58a2c3a3c6fed66f14c571f360998834734cf3b"><div class="ttname"><a href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a3c6fed66f14c571f360998834734cf3b">CC_N</a></div><div class="ttdoc">Résultat négatif. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00031">machine.h:31</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_affda555699481b52022b53823658784e_icgraph.png" border="0" usemap="#exec_8c_affda555699481b52022b53823658784e_icgraph" alt=""/></div>
+<map name="exec_8c_affda555699481b52022b53823658784e_icgraph" id="exec_8c_affda555699481b52022b53823658784e_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a161ce21cc67c2921078bae84ed79774c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool check_condition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérification de la condition de branchement. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00078">78</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00083">Machine::_cc</a>, <a class="el" href="instruction_8h_source.html#l00063">Instruction::_regcond</a>, <a class="el" href="machine_8h_source.html#l00031">CC_N</a>, <a class="el" href="machine_8h_source.html#l00030">CC_P</a>, <a class="el" href="machine_8h_source.html#l00029">CC_Z</a>, <a class="el" href="instruction_8h_source.html#l00112">EQ</a>, <a class="el" href="error_8h_source.html#l00023">ERR_CONDITION</a>, <a class="el" href="error_8c_source.html#l00019">error()</a>, <a class="el" href="instruction_8h_source.html#l00115">GE</a>, <a class="el" href="instruction_8h_source.html#l00114">GT</a>, <a class="el" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a>, <a class="el" href="instruction_8h_source.html#l00117">LE</a>, <a class="el" href="instruction_8h_source.html#l00116">LT</a>, <a class="el" href="instruction_8h_source.html#l00111">NC</a>, et <a class="el" href="instruction_8h_source.html#l00113">NE</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00197">branch()</a>, et <a class="el" href="exec_8c_source.html#l00214">call()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">switch</span> (instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a3dbd1016ea99d087d747530418b89a01">NC</a>: <span class="comment">// Pas de condition</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a9efdc855f3c1477957fb50affec07f8f">EQ</a>: <span class="comment">// Egal à 0</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> (pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> == <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f">CC_Z</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a4d3f872f5054b256b01ee4f2c8cf51db">NE</a>: <span class="comment">// Different de zero</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> (pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> != <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f">CC_Z</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a12f5476fa04803e6cc72f2198730d892">GT</a>: <span class="comment">// Strictement positif</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> (pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> == <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3af95cd91008581d4a445a565d66206a3c">CC_P</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a558711b4a2a25070b970d85f5926d5ce">GE</a>: <span class="comment">// Positif ou nul</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> (pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> == <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3af95cd91008581d4a445a565d66206a3c">CC_P</a> || pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> == <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f">CC_Z</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a486aa221ceeeac475326e85d3d37f571">LT</a>: <span class="comment">// Strictement négatif</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> (pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> == <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a3c6fed66f14c571f360998834734cf3b">CC_N</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a662ed4b51721a45f07d645d4ca099a61">LE</a>: <span class="comment">// Négatif ou nul</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> (pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> == <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a3c6fed66f14c571f360998834734cf3b">CC_N</a> || pmach-&gt;<a class="code" href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">_cc</a> == <a class="code" href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f">CC_Z</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a>(<a class="code" href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5af019075ff6d5f0b03e50a7a221c456ab">ERR_CONDITION</a>, addr);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8a12f5476fa04803e6cc72f2198730d892"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a12f5476fa04803e6cc72f2198730d892">GT</a></div><div class="ttdoc">Strictement positif. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00114">instruction.h:114</a></div></div>
+<div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8a558711b4a2a25070b970d85f5926d5ce"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a558711b4a2a25070b970d85f5926d5ce">GE</a></div><div class="ttdoc">Positif ou nul. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00115">instruction.h:115</a></div></div>
+<div class="ttc" id="machine_8h_html_a4bc92b6f72076bb5dd651a143f58a2c3af95cd91008581d4a445a565d66206a3c"><div class="ttname"><a href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3af95cd91008581d4a445a565d66206a3c">CC_P</a></div><div class="ttdoc">Résultat positif. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00030">machine.h:30</a></div></div>
+<div class="ttc" id="error_8h_html_a2c3e4bb40f36b262a5214e2da2bca9c5af019075ff6d5f0b03e50a7a221c456ab"><div class="ttname"><a href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5af019075ff6d5f0b03e50a7a221c456ab">ERR_CONDITION</a></div><div class="ttdoc">Condition illégale. </div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00023">error.h:23</a></div></div>
+<div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8a3dbd1016ea99d087d747530418b89a01"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a3dbd1016ea99d087d747530418b89a01">NC</a></div><div class="ttdoc">Pas de condition (nrachement inconditionnel) </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00111">instruction.h:111</a></div></div>
+<div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8a4d3f872f5054b256b01ee4f2c8cf51db"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a4d3f872f5054b256b01ee4f2c8cf51db">NE</a></div><div class="ttdoc">Différent de 0. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00113">instruction.h:113</a></div></div>
+<div class="ttc" id="machine_8h_html_a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f"><div class="ttname"><a href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a956fd0d2f14871f1999334a1a5d6e74f">CC_Z</a></div><div class="ttdoc">Résultat nul. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00029">machine.h:29</a></div></div>
+<div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8a9efdc855f3c1477957fb50affec07f8f"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a9efdc855f3c1477957fb50affec07f8f">EQ</a></div><div class="ttdoc">Égal à 0. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00112">instruction.h:112</a></div></div>
+<div class="ttc" id="unionInstruction_html_a8f5f38c91d2c3443dcd962101bfe19e2"><div class="ttname"><a href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">Instruction::_regcond</a></div><div class="ttdeci">unsigned _regcond</div><div class="ttdoc">Numéro de registre ou condition. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00063">instruction.h:63</a></div></div>
+<div class="ttc" id="structMachine_html_adbb793b4331ed11783001895c76b6d4c"><div class="ttname"><a href="structMachine.html#adbb793b4331ed11783001895c76b6d4c">Machine::_cc</a></div><div class="ttdeci">Condition_Code _cc</div><div class="ttdoc">Code condition : signe de la dernière opération. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00083">machine.h:83</a></div></div>
+<div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8a662ed4b51721a45f07d645d4ca099a61"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a662ed4b51721a45f07d645d4ca099a61">LE</a></div><div class="ttdoc">Négatif ou null. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00117">instruction.h:117</a></div></div>
+<div class="ttc" id="machine_8h_html_a4bc92b6f72076bb5dd651a143f58a2c3a3c6fed66f14c571f360998834734cf3b"><div class="ttname"><a href="machine_8h.html#a4bc92b6f72076bb5dd651a143f58a2c3a3c6fed66f14c571f360998834734cf3b">CC_N</a></div><div class="ttdoc">Résultat négatif. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00031">machine.h:31</a></div></div>
+<div class="ttc" id="unionInstruction_html_a5903d65905a4fd4f8c917ed17d9d9211"><div class="ttname"><a href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a></div><div class="ttdeci">struct Instruction::@0 instr_generic</div><div class="ttdoc">Format générique : les premiers champs sont communs. </div></div>
+<div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8a486aa221ceeeac475326e85d3d37f571"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a486aa221ceeeac475326e85d3d37f571">LT</a></div><div class="ttdoc">Strictement négatif. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00116">instruction.h:116</a></div></div>
+<div class="ttc" id="error_8c_html_a531bb138b38aef758b45a442aa53938a"><div class="ttname"><a href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a></div><div class="ttdeci">void error(Error err, unsigned addr)</div><div class="ttdoc">Affichage d&#39;une erreur et fin du simulateur. </div><div class="ttdef"><b>Definition:</b> <a href="error_8c_source.html#l00019">error.c:19</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a161ce21cc67c2921078bae84ed79774c_cgraph.png" border="0" usemap="#exec_8c_a161ce21cc67c2921078bae84ed79774c_cgraph" alt=""/></div>
+<map name="exec_8c_a161ce21cc67c2921078bae84ed79774c_cgraph" id="exec_8c_a161ce21cc67c2921078bae84ed79774c_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a161ce21cc67c2921078bae84ed79774c_icgraph.png" border="0" usemap="#exec_8c_a161ce21cc67c2921078bae84ed79774c_icgraph" alt=""/></div>
+<map name="exec_8c_a161ce21cc67c2921078bae84ed79774c_icgraph" id="exec_8c_a161ce21cc67c2921078bae84ed79774c_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aae6d0305934052f93dcb6cdce7d293bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void check_immediate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie que l'instruction n'est pas en immédiate sinon erreur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00027">27</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="error_8h_source.html#l00024">ERR_IMMEDIATE</a>, <a class="el" href="error_8c_source.html#l00019">error()</a>, et <a class="el" href="exec_8c_source.html#l00015">is_immediate()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00197">branch()</a>, <a class="el" href="exec_8c_source.html#l00214">call()</a>, <a class="el" href="exec_8c_source.html#l00268">pop()</a>, et <a class="el" href="exec_8c_source.html#l00139">store()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a>(instr,addr))</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a>(<a class="code" href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5ab6b77dff11bf3f9ea5db7ece610af021">ERR_IMMEDIATE</a>,addr);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="error_8h_html_a2c3e4bb40f36b262a5214e2da2bca9c5ab6b77dff11bf3f9ea5db7ece610af021"><div class="ttname"><a href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5ab6b77dff11bf3f9ea5db7ece610af021">ERR_IMMEDIATE</a></div><div class="ttdoc">Valeur immédiate interdite. </div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00024">error.h:24</a></div></div>
+<div class="ttc" id="exec_8c_html_aee58f0bd338aac461910322697938e01"><div class="ttname"><a href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a></div><div class="ttdeci">bool is_immediate(Instruction instr, unsigned addr)</div><div class="ttdoc">Exécution des instructions pour la simulation du processeur. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00015">exec.c:15</a></div></div>
+<div class="ttc" id="error_8c_html_a531bb138b38aef758b45a442aa53938a"><div class="ttname"><a href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a></div><div class="ttdeci">void error(Error err, unsigned addr)</div><div class="ttdoc">Affichage d&#39;une erreur et fin du simulateur. </div><div class="ttdef"><b>Definition:</b> <a href="error_8c_source.html#l00019">error.c:19</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_aae6d0305934052f93dcb6cdce7d293bf_cgraph.png" border="0" usemap="#exec_8c_aae6d0305934052f93dcb6cdce7d293bf_cgraph" alt=""/></div>
+<map name="exec_8c_aae6d0305934052f93dcb6cdce7d293bf_cgraph" id="exec_8c_aae6d0305934052f93dcb6cdce7d293bf_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_aae6d0305934052f93dcb6cdce7d293bf_icgraph.png" border="0" usemap="#exec_8c_aae6d0305934052f93dcb6cdce7d293bf_icgraph" alt=""/></div>
+<map name="exec_8c_aae6d0305934052f93dcb6cdce7d293bf_icgraph" id="exec_8c_aae6d0305934052f93dcb6cdce7d293bf_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a259f1da450e59303ef7d8f555009d870"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void check_seg_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>data_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie qu'il n'y a pas d'ERR_SEGDATA sur le tableau des données. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">data_addr</td><td>adresse réelle </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00052">52</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00077">Machine::_datasize</a>, <a class="el" href="error_8h_source.html#l00026">ERR_SEGDATA</a>, et <a class="el" href="error_8c_source.html#l00019">error()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00156">add()</a>, <a class="el" href="exec_8c_source.html#l00119">load()</a>, <a class="el" href="exec_8c_source.html#l00268">pop()</a>, <a class="el" href="exec_8c_source.html#l00248">push()</a>, <a class="el" href="exec_8c_source.html#l00139">store()</a>, et <a class="el" href="exec_8c_source.html#l00177">sub()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (data_addr &gt; pmach-&gt;<a class="code" href="structMachine.html#a8a50815b359c1602c95edd3459ad05c8">_datasize</a>)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a>(<a class="code" href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5a89c234e9ccacaa205398522f841a0915">ERR_SEGDATA</a>, addr);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="ttc" id="error_8h_html_a2c3e4bb40f36b262a5214e2da2bca9c5a89c234e9ccacaa205398522f841a0915"><div class="ttname"><a href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5a89c234e9ccacaa205398522f841a0915">ERR_SEGDATA</a></div><div class="ttdoc">Violation de taille du segment de données. </div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00026">error.h:26</a></div></div>
+<div class="ttc" id="structMachine_html_a8a50815b359c1602c95edd3459ad05c8"><div class="ttname"><a href="structMachine.html#a8a50815b359c1602c95edd3459ad05c8">Machine::_datasize</a></div><div class="ttdeci">unsigned int _datasize</div><div class="ttdoc">Taille utilisée pour les données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00077">machine.h:77</a></div></div>
+<div class="ttc" id="error_8c_html_a531bb138b38aef758b45a442aa53938a"><div class="ttname"><a href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a></div><div class="ttdeci">void error(Error err, unsigned addr)</div><div class="ttdoc">Affichage d&#39;une erreur et fin du simulateur. </div><div class="ttdef"><b>Definition:</b> <a href="error_8c_source.html#l00019">error.c:19</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a259f1da450e59303ef7d8f555009d870_cgraph.png" border="0" usemap="#exec_8c_a259f1da450e59303ef7d8f555009d870_cgraph" alt=""/></div>
+<map name="exec_8c_a259f1da450e59303ef7d8f555009d870_cgraph" id="exec_8c_a259f1da450e59303ef7d8f555009d870_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a259f1da450e59303ef7d8f555009d870_icgraph.png" border="0" usemap="#exec_8c_a259f1da450e59303ef7d8f555009d870_icgraph" alt=""/></div>
+<map name="exec_8c_a259f1da450e59303ef7d8f555009d870_icgraph" id="exec_8c_a259f1da450e59303ef7d8f555009d870_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f3c7b86d834d27ad12ef08f7478ac57"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void check_stack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérification que Stack Pointer (SP) ne dépasse pas la zone dédiée à la pile. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00105">105</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00079">Machine::_dataend</a>, <a class="el" href="machine_8h_source.html#l00077">Machine::_datasize</a>, <a class="el" href="error_8h_source.html#l00027">ERR_SEGSTACK</a>, et <a class="el" href="error_8c_source.html#l00019">error()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00214">call()</a>, <a class="el" href="exec_8c_source.html#l00268">pop()</a>, <a class="el" href="exec_8c_source.html#l00248">push()</a>, et <a class="el" href="exec_8c_source.html#l00234">ret()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">if</span> (pmach-&gt;_sp &lt; pmach-&gt;<a class="code" href="structMachine.html#a4cf57550abe18e1dece177fb8794d6c0">_dataend</a> || pmach-&gt;_sp &gt;= pmach-&gt;<a class="code" href="structMachine.html#a8a50815b359c1602c95edd3459ad05c8">_datasize</a>)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a>(<a class="code" href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5af9241804ffe147bd31661731289191d7">ERR_SEGSTACK</a>,addr);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="ttc" id="structMachine_html_a4cf57550abe18e1dece177fb8794d6c0"><div class="ttname"><a href="structMachine.html#a4cf57550abe18e1dece177fb8794d6c0">Machine::_dataend</a></div><div class="ttdeci">unsigned int _dataend</div><div class="ttdoc">Première adresse libre après les données statiques. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00079">machine.h:79</a></div></div>
+<div class="ttc" id="structMachine_html_a8a50815b359c1602c95edd3459ad05c8"><div class="ttname"><a href="structMachine.html#a8a50815b359c1602c95edd3459ad05c8">Machine::_datasize</a></div><div class="ttdeci">unsigned int _datasize</div><div class="ttdoc">Taille utilisée pour les données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00077">machine.h:77</a></div></div>
+<div class="ttc" id="error_8h_html_a2c3e4bb40f36b262a5214e2da2bca9c5af9241804ffe147bd31661731289191d7"><div class="ttname"><a href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5af9241804ffe147bd31661731289191d7">ERR_SEGSTACK</a></div><div class="ttdoc">Violation de taille du segment de pile. </div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00027">error.h:27</a></div></div>
+<div class="ttc" id="error_8c_html_a531bb138b38aef758b45a442aa53938a"><div class="ttname"><a href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a></div><div class="ttdeci">void error(Error err, unsigned addr)</div><div class="ttdoc">Affichage d&#39;une erreur et fin du simulateur. </div><div class="ttdef"><b>Definition:</b> <a href="error_8c_source.html#l00019">error.c:19</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a8f3c7b86d834d27ad12ef08f7478ac57_cgraph.png" border="0" usemap="#exec_8c_a8f3c7b86d834d27ad12ef08f7478ac57_cgraph" alt=""/></div>
+<map name="exec_8c_a8f3c7b86d834d27ad12ef08f7478ac57_cgraph" id="exec_8c_a8f3c7b86d834d27ad12ef08f7478ac57_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a8f3c7b86d834d27ad12ef08f7478ac57_icgraph.png" border="0" usemap="#exec_8c_a8f3c7b86d834d27ad12ef08f7478ac57_icgraph" alt=""/></div>
+<map name="exec_8c_a8f3c7b86d834d27ad12ef08f7478ac57_icgraph" id="exec_8c_a8f3c7b86d834d27ad12ef08f7478ac57_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a41471ced34d27777447c2609173af7de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool decode_execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Décodage et exécution d'une instruction. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>la machine/programme en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>l'instruction à exécuter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>faux après l'exécution de <code>HALT</code> ; vrai sinon </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00279">279</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="instruction_8h_source.html#l00060">Instruction::_cop</a>, <a class="el" href="machine_8h_source.html#l00082">Machine::_pc</a>, <a class="el" href="instruction_8h_source.html#l00019">ADD</a>, <a class="el" href="exec_8c_source.html#l00156">add()</a>, <a class="el" href="instruction_8h_source.html#l00021">BRANCH</a>, <a class="el" href="exec_8c_source.html#l00197">branch()</a>, <a class="el" href="instruction_8h_source.html#l00022">CALL</a>, <a class="el" href="exec_8c_source.html#l00214">call()</a>, <a class="el" href="error_8h_source.html#l00022">ERR_ILLEGAL</a>, <a class="el" href="error_8h_source.html#l00021">ERR_UNKNOWN</a>, <a class="el" href="error_8c_source.html#l00019">error()</a>, <a class="el" href="instruction_8h_source.html#l00026">HALT</a>, <a class="el" href="instruction_8h_source.html#l00015">ILLOP</a>, <a class="el" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a>, <a class="el" href="instruction_8h_source.html#l00017">LOAD</a>, <a class="el" href="exec_8c_source.html#l00119">load()</a>, <a class="el" href="instruction_8h_source.html#l00016">NOP</a>, <a class="el" href="instruction_8h_source.html#l00025">POP</a>, <a class="el" href="exec_8c_source.html#l00268">pop()</a>, <a class="el" href="instruction_8h_source.html#l00024">PUSH</a>, <a class="el" href="exec_8c_source.html#l00248">push()</a>, <a class="el" href="instruction_8h_source.html#l00023">RET</a>, <a class="el" href="exec_8c_source.html#l00234">ret()</a>, <a class="el" href="instruction_8h_source.html#l00018">STORE</a>, <a class="el" href="exec_8c_source.html#l00139">store()</a>, <a class="el" href="instruction_8h_source.html#l00020">SUB</a>, <a class="el" href="exec_8c_source.html#l00177">sub()</a>, <a class="el" href="error_8h_source.html#l00040">WARN_HALT</a>, et <a class="el" href="error_8c_source.html#l00057">warning()</a>.</p>
+
+<p>Référencé par <a class="el" href="machine_8c_source.html#l00232">simul()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                                                       {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">switch</span> (instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a5682ffc6f762bda7a50e41ea9042cb39">_cop</a>) {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ad1bcea5caa46727ab4e411cffaa236f2">ILLOP</a> :</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <a class="code" href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a>(<a class="code" href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5aeb345404de9786d0956657072a6c552e">ERR_ILLEGAL</a>, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6af811bef354b292ff0713c50d7652c026">NOP</a> :</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a972dbcdf74cff71e20bdcfb53be9c391">LOAD</a> :</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="exec_8c.html#a3ffc341e4de6e5d18c2aaa75bb1d1bd4">load</a>(pmach, instr, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6afeb01cb4572ba190cd7932e49446c480">STORE</a> :</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="exec_8c.html#a4f4f15617a93854e66e215b1b5976385">store</a>(pmach, instr, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6acfcf145f2788bf340ff3f3098bc54909">ADD</a> :</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="exec_8c.html#a7ee7713b6e85c2188ab02f2915de93f8">add</a>(pmach, instr, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a12b733d4941495e86811fe6ceeeff9da">SUB</a> :</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="exec_8c.html#a3f80bd12c3f294a72d93d559f5c238ca">sub</a>(pmach, instr, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ad9b20a9207fb2cd3021b9eb0b7c6fe5e">BRANCH</a> :</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="exec_8c.html#a16b312c92b0fbfd48a29322bb499b737">branch</a>(pmach, instr, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6abd0ebc08c262bab82a1882256d2d66e8">CALL</a> :</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="exec_8c.html#ae92e2b60b587827a53e9eeda2d1ce875">call</a>(pmach, instr, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ab2510768eaba5e52ba71678e19a65464">RET</a> :</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="exec_8c.html#acfdb4470feb4f92a231c3314185c9f4a">ret</a>(pmach, instr, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ad263caec619c4d99e4684ba0fabd9493">PUSH</a> :</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="exec_8c.html#a8ffee845fd1b2304ae12874ab95b13a3">push</a>(pmach, instr, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a061dcf4785583d8653942f2d252174fa">POP</a> :</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="exec_8c.html#aee15e6caec7d046384f6c7832fd5f8b1">pop</a>(pmach, instr, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6aa2fd6bbb0c07e28e835ba595e64df78c">HALT</a> :</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <a class="code" href="error_8c.html#aec2872edfc57849ea2557178dc2b2673">warning</a>(<a class="code" href="error_8h.html#af6ea07812363481c623a23ea26fbf8eda5a5baa88988dd74ee8359d6e504c6d77">WARN_HALT</a>, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">default</span> :</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <a class="code" href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a>(<a class="code" href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5a5c708decdcbd7d8c9fddd8d9e75828a1">ERR_UNKNOWN</a>, pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a>-1);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_ae92e2b60b587827a53e9eeda2d1ce875"><div class="ttname"><a href="exec_8c.html#ae92e2b60b587827a53e9eeda2d1ce875">call</a></div><div class="ttdeci">bool call(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00214">exec.c:214</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6ad263caec619c4d99e4684ba0fabd9493"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ad263caec619c4d99e4684ba0fabd9493">PUSH</a></div><div class="ttdoc">Empilement sur la pile d&#39;exécution. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00024">instruction.h:24</a></div></div>
+<div class="ttc" id="exec_8c_html_acfdb4470feb4f92a231c3314185c9f4a"><div class="ttname"><a href="exec_8c.html#acfdb4470feb4f92a231c3314185c9f4a">ret</a></div><div class="ttdeci">bool ret(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00234">exec.c:234</a></div></div>
+<div class="ttc" id="exec_8c_html_a16b312c92b0fbfd48a29322bb499b737"><div class="ttname"><a href="exec_8c.html#a16b312c92b0fbfd48a29322bb499b737">branch</a></div><div class="ttdeci">bool branch(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00197">exec.c:197</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6abd0ebc08c262bab82a1882256d2d66e8"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6abd0ebc08c262bab82a1882256d2d66e8">CALL</a></div><div class="ttdoc">Appel de sous-programme. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00022">instruction.h:22</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6ad9b20a9207fb2cd3021b9eb0b7c6fe5e"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ad9b20a9207fb2cd3021b9eb0b7c6fe5e">BRANCH</a></div><div class="ttdoc">Branchement conditionnel ou non. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00021">instruction.h:21</a></div></div>
+<div class="ttc" id="exec_8c_html_a3ffc341e4de6e5d18c2aaa75bb1d1bd4"><div class="ttname"><a href="exec_8c.html#a3ffc341e4de6e5d18c2aaa75bb1d1bd4">load</a></div><div class="ttdeci">bool load(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00119">exec.c:119</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6afeb01cb4572ba190cd7932e49446c480"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6afeb01cb4572ba190cd7932e49446c480">STORE</a></div><div class="ttdoc">Rangement du contenu d&#39;un registre. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00018">instruction.h:18</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6a061dcf4785583d8653942f2d252174fa"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a061dcf4785583d8653942f2d252174fa">POP</a></div><div class="ttdoc">Dépilement de la pile d&#39;exécution. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00025">instruction.h:25</a></div></div>
+<div class="ttc" id="exec_8c_html_a3f80bd12c3f294a72d93d559f5c238ca"><div class="ttname"><a href="exec_8c.html#a3f80bd12c3f294a72d93d559f5c238ca">sub</a></div><div class="ttdeci">bool sub(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00177">exec.c:177</a></div></div>
+<div class="ttc" id="error_8h_html_a2c3e4bb40f36b262a5214e2da2bca9c5aeb345404de9786d0956657072a6c552e"><div class="ttname"><a href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5aeb345404de9786d0956657072a6c552e">ERR_ILLEGAL</a></div><div class="ttdoc">Instruction illégale. </div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00022">error.h:22</a></div></div>
+<div class="ttc" id="error_8c_html_aec2872edfc57849ea2557178dc2b2673"><div class="ttname"><a href="error_8c.html#aec2872edfc57849ea2557178dc2b2673">warning</a></div><div class="ttdeci">void warning(Warning warn, unsigned addr)</div><div class="ttdoc">Affichage d&#39;un avertissement. </div><div class="ttdef"><b>Definition:</b> <a href="error_8c_source.html#l00057">error.c:57</a></div></div>
+<div class="ttc" id="exec_8c_html_a4f4f15617a93854e66e215b1b5976385"><div class="ttname"><a href="exec_8c.html#a4f4f15617a93854e66e215b1b5976385">store</a></div><div class="ttdeci">bool store(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00139">exec.c:139</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6a972dbcdf74cff71e20bdcfb53be9c391"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a972dbcdf74cff71e20bdcfb53be9c391">LOAD</a></div><div class="ttdoc">Chargement d&#39;un registre. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00017">instruction.h:17</a></div></div>
+<div class="ttc" id="exec_8c_html_a7ee7713b6e85c2188ab02f2915de93f8"><div class="ttname"><a href="exec_8c.html#a7ee7713b6e85c2188ab02f2915de93f8">add</a></div><div class="ttdeci">bool add(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00156">exec.c:156</a></div></div>
+<div class="ttc" id="unionInstruction_html_a5682ffc6f762bda7a50e41ea9042cb39"><div class="ttname"><a href="unionInstruction.html#a5682ffc6f762bda7a50e41ea9042cb39">Instruction::_cop</a></div><div class="ttdeci">Code_Op _cop</div><div class="ttdoc">Code opération. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00060">instruction.h:60</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6acfcf145f2788bf340ff3f3098bc54909"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6acfcf145f2788bf340ff3f3098bc54909">ADD</a></div><div class="ttdoc">Addition à un registre. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00019">instruction.h:19</a></div></div>
+<div class="ttc" id="error_8h_html_a2c3e4bb40f36b262a5214e2da2bca9c5a5c708decdcbd7d8c9fddd8d9e75828a1"><div class="ttname"><a href="error_8h.html#a2c3e4bb40f36b262a5214e2da2bca9c5a5c708decdcbd7d8c9fddd8d9e75828a1">ERR_UNKNOWN</a></div><div class="ttdoc">Instruction inconnue. </div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00021">error.h:21</a></div></div>
+<div class="ttc" id="exec_8c_html_aee15e6caec7d046384f6c7832fd5f8b1"><div class="ttname"><a href="exec_8c.html#aee15e6caec7d046384f6c7832fd5f8b1">pop</a></div><div class="ttdeci">bool pop(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00268">exec.c:268</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6aa2fd6bbb0c07e28e835ba595e64df78c"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6aa2fd6bbb0c07e28e835ba595e64df78c">HALT</a></div><div class="ttdoc">Arrêt (normal) du programme. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00026">instruction.h:26</a></div></div>
+<div class="ttc" id="structMachine_html_a1b3345874b1ade4324f16f3e03944675"><div class="ttname"><a href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">Machine::_pc</a></div><div class="ttdeci">unsigned _pc</div><div class="ttdoc">Compteur ordinal. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00082">machine.h:82</a></div></div>
+<div class="ttc" id="exec_8c_html_a8ffee845fd1b2304ae12874ab95b13a3"><div class="ttname"><a href="exec_8c.html#a8ffee845fd1b2304ae12874ab95b13a3">push</a></div><div class="ttdeci">bool push(Machine *pmach, Instruction instr, unsigned addr)</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00248">exec.c:248</a></div></div>
+<div class="ttc" id="error_8h_html_af6ea07812363481c623a23ea26fbf8eda5a5baa88988dd74ee8359d6e504c6d77"><div class="ttname"><a href="error_8h.html#af6ea07812363481c623a23ea26fbf8eda5a5baa88988dd74ee8359d6e504c6d77">WARN_HALT</a></div><div class="ttdoc">Fin normale du programme (sur HALT) </div><div class="ttdef"><b>Definition:</b> <a href="error_8h_source.html#l00040">error.h:40</a></div></div>
+<div class="ttc" id="unionInstruction_html_a5903d65905a4fd4f8c917ed17d9d9211"><div class="ttname"><a href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a></div><div class="ttdeci">struct Instruction::@0 instr_generic</div><div class="ttdoc">Format générique : les premiers champs sont communs. </div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6ab2510768eaba5e52ba71678e19a65464"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ab2510768eaba5e52ba71678e19a65464">RET</a></div><div class="ttdoc">Retour de sous-programme. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00023">instruction.h:23</a></div></div>
+<div class="ttc" id="error_8c_html_a531bb138b38aef758b45a442aa53938a"><div class="ttname"><a href="error_8c.html#a531bb138b38aef758b45a442aa53938a">error</a></div><div class="ttdeci">void error(Error err, unsigned addr)</div><div class="ttdoc">Affichage d&#39;une erreur et fin du simulateur. </div><div class="ttdef"><b>Definition:</b> <a href="error_8c_source.html#l00019">error.c:19</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6ad1bcea5caa46727ab4e411cffaa236f2"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ad1bcea5caa46727ab4e411cffaa236f2">ILLOP</a></div><div class="ttdoc">Instruction illégale. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00015">instruction.h:15</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6af811bef354b292ff0713c50d7652c026"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6af811bef354b292ff0713c50d7652c026">NOP</a></div><div class="ttdoc">Instruction sans effet. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00016">instruction.h:16</a></div></div>
+<div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6a12b733d4941495e86811fe6ceeeff9da"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a12b733d4941495e86811fe6ceeeff9da">SUB</a></div><div class="ttdoc">Soustraction d&#39;un registre. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00020">instruction.h:20</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a41471ced34d27777447c2609173af7de_cgraph.png" border="0" usemap="#exec_8c_a41471ced34d27777447c2609173af7de_cgraph" alt=""/></div>
+<map name="exec_8c_a41471ced34d27777447c2609173af7de_cgraph" id="exec_8c_a41471ced34d27777447c2609173af7de_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a41471ced34d27777447c2609173af7de_icgraph.png" border="0" usemap="#exec_8c_a41471ced34d27777447c2609173af7de_icgraph" alt=""/></div>
+<map name="exec_8c_a41471ced34d27777447c2609173af7de_icgraph" id="exec_8c_a41471ced34d27777447c2609173af7de_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e5d79846ee7bfd563fb1b7939c7546b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_address </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Récupère l'adresse réelle, à partir d'un adressage indexé ou absolu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00038">38</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="instruction_8h_source.html#l00074">Instruction::_address</a>, <a class="el" href="instruction_8h_source.html#l00062">Instruction::_indexed</a>, <a class="el" href="instruction_8h_source.html#l00095">Instruction::_offset</a>, <a class="el" href="machine_8h_source.html#l00084">Machine::_registers</a>, <a class="el" href="instruction_8h_source.html#l00094">Instruction::_rindex</a>, <a class="el" href="unionInstruction.html#a076d47129f335050439808b57f8c6e6e">Instruction::instr_absolute</a>, <a class="el" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a>, et <a class="el" href="unionInstruction.html#a095e13c73c8bba3d15603a390804d09b">Instruction::instr_indexed</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00156">add()</a>, <a class="el" href="exec_8c_source.html#l00197">branch()</a>, <a class="el" href="exec_8c_source.html#l00214">call()</a>, <a class="el" href="exec_8c_source.html#l00119">load()</a>, <a class="el" href="exec_8c_source.html#l00268">pop()</a>, <a class="el" href="exec_8c_source.html#l00248">push()</a>, <a class="el" href="exec_8c_source.html#l00139">store()</a>, et <a class="el" href="exec_8c_source.html#l00177">sub()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{   </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a5d3ae850423e6d91f7fe54111c3f766c">_indexed</a>) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a095e13c73c8bba3d15603a390804d09b">instr_indexed</a>.<a class="code" href="unionInstruction.html#a057a22a377dd83f2e63a8b6e34df7164">_rindex</a>] + instr.<a class="code" href="unionInstruction.html#a095e13c73c8bba3d15603a390804d09b">instr_indexed</a>.<a class="code" href="unionInstruction.html#abb5834e4f338c8e0411467130a1a4b50">_offset</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    } </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> instr.<a class="code" href="unionInstruction.html#a076d47129f335050439808b57f8c6e6e">instr_absolute</a>.<a class="code" href="unionInstruction.html#a46298af10c7133abf77f4d86f44b549b">_address</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="unionInstruction_html_a5d3ae850423e6d91f7fe54111c3f766c"><div class="ttname"><a href="unionInstruction.html#a5d3ae850423e6d91f7fe54111c3f766c">Instruction::_indexed</a></div><div class="ttdeci">bool _indexed</div><div class="ttdoc">Adressage indirect ? </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00062">instruction.h:62</a></div></div>
+<div class="ttc" id="unionInstruction_html_a095e13c73c8bba3d15603a390804d09b"><div class="ttname"><a href="unionInstruction.html#a095e13c73c8bba3d15603a390804d09b">Instruction::instr_indexed</a></div><div class="ttdeci">struct Instruction::@3 instr_indexed</div><div class="ttdoc">Format d&#39;une instruction à adressage indéxé </div></div>
+<div class="ttc" id="unionInstruction_html_abb5834e4f338c8e0411467130a1a4b50"><div class="ttname"><a href="unionInstruction.html#abb5834e4f338c8e0411467130a1a4b50">Instruction::_offset</a></div><div class="ttdeci">signed int _offset</div><div class="ttdoc">Déplacement. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00095">instruction.h:95</a></div></div>
+<div class="ttc" id="unionInstruction_html_a46298af10c7133abf77f4d86f44b549b"><div class="ttname"><a href="unionInstruction.html#a46298af10c7133abf77f4d86f44b549b">Instruction::_address</a></div><div class="ttdeci">unsigned _address</div><div class="ttdoc">Adresse absolue. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00074">instruction.h:74</a></div></div>
+<div class="ttc" id="unionInstruction_html_a076d47129f335050439808b57f8c6e6e"><div class="ttname"><a href="unionInstruction.html#a076d47129f335050439808b57f8c6e6e">Instruction::instr_absolute</a></div><div class="ttdeci">struct Instruction::@1 instr_absolute</div><div class="ttdoc">Format d&#39;une instruction à adressage absolue. </div></div>
+<div class="ttc" id="unionInstruction_html_a057a22a377dd83f2e63a8b6e34df7164"><div class="ttname"><a href="unionInstruction.html#a057a22a377dd83f2e63a8b6e34df7164">Instruction::_rindex</a></div><div class="ttdeci">unsigned _rindex</div><div class="ttdoc">Numéro du registre d&#39;index. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00094">instruction.h:94</a></div></div>
+<div class="ttc" id="structMachine_html_ab4a927b1e214bd40d2406f1080eaa6c4"><div class="ttname"><a href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">Machine::_registers</a></div><div class="ttdeci">Word _registers[NREGISTERS]</div><div class="ttdoc">Registres généraux (accumulateurs) </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00084">machine.h:84</a></div></div>
+<div class="ttc" id="unionInstruction_html_a5903d65905a4fd4f8c917ed17d9d9211"><div class="ttname"><a href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a></div><div class="ttdeci">struct Instruction::@0 instr_generic</div><div class="ttdoc">Format générique : les premiers champs sont communs. </div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a1e5d79846ee7bfd563fb1b7939c7546b_icgraph.png" border="0" usemap="#exec_8c_a1e5d79846ee7bfd563fb1b7939c7546b_icgraph" alt=""/></div>
+<map name="exec_8c_a1e5d79846ee7bfd563fb1b7939c7546b_icgraph" id="exec_8c_a1e5d79846ee7bfd563fb1b7939c7546b_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aee58f0bd338aac461910322697938e01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_immediate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exécution des instructions pour la simulation du processeur. </p>
+<p>exec.cretourne True si l'instruction est immédiate sinon false.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00015">15</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="instruction_8h_source.html#l00061">Instruction::_immediate</a>, et <a class="el" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00156">add()</a>, <a class="el" href="exec_8c_source.html#l00027">check_immediate()</a>, <a class="el" href="exec_8c_source.html#l00119">load()</a>, <a class="el" href="exec_8c_source.html#l00248">push()</a>, et <a class="el" href="exec_8c_source.html#l00177">sub()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a350ef9c256c24b90297798b15164db13">_immediate</a>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="ttc" id="unionInstruction_html_a350ef9c256c24b90297798b15164db13"><div class="ttname"><a href="unionInstruction.html#a350ef9c256c24b90297798b15164db13">Instruction::_immediate</a></div><div class="ttdeci">bool _immediate</div><div class="ttdoc">Adressage immédiat ? </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00061">instruction.h:61</a></div></div>
+<div class="ttc" id="unionInstruction_html_a5903d65905a4fd4f8c917ed17d9d9211"><div class="ttname"><a href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a></div><div class="ttdeci">struct Instruction::@0 instr_generic</div><div class="ttdoc">Format générique : les premiers champs sont communs. </div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_aee58f0bd338aac461910322697938e01_icgraph.png" border="0" usemap="#exec_8c_aee58f0bd338aac461910322697938e01_icgraph" alt=""/></div>
+<map name="exec_8c_aee58f0bd338aac461910322697938e01_icgraph" id="exec_8c_aee58f0bd338aac461910322697938e01_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ffc341e4de6e5d18c2aaa75bb1d1bd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Décodage et exécution de l'instruction LOAD. Adressage immédiat, absolu et indexé pour la source. Il faut indiquer un registre de destination.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00119">119</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00076">Machine::_data</a>, <a class="el" href="instruction_8h_source.html#l00063">Instruction::_regcond</a>, <a class="el" href="machine_8h_source.html#l00084">Machine::_registers</a>, <a class="el" href="instruction_8h_source.html#l00084">Instruction::_value</a>, <a class="el" href="exec_8c_source.html#l00063">change_cc()</a>, <a class="el" href="exec_8c_source.html#l00052">check_seg_data()</a>, <a class="el" href="exec_8c_source.html#l00038">get_address()</a>, <a class="el" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a>, <a class="el" href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">Instruction::instr_immediate</a>, et <a class="el" href="exec_8c_source.html#l00015">is_immediate()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00279">decode_execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                                            {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a>(instr,addr)) { <span class="comment">// Si I = 1 : Immediat, on est en immediat, on load directement la valeur dans le registre</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>] = instr.<a class="code" href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">instr_immediate</a>.<a class="code" href="unionInstruction.html#aa0cc705f1610955cf6ac0b15efbcca8a">_value</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    } <span class="keywordflow">else</span> { <span class="comment">// on va chercher la valeur dans data pour la mettre dans le registre</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> address = <a class="code" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a>(pmach, instr);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a>(pmach, address, addr);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>] = pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[address];</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="exec_8c.html#affda555699481b52022b53823658784e">change_cc</a>(pmach, pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>]);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_a1e5d79846ee7bfd563fb1b7939c7546b"><div class="ttname"><a href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a></div><div class="ttdeci">unsigned int get_address(Machine *pmach, Instruction instr)</div><div class="ttdoc">Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00038">exec.c:38</a></div></div>
+<div class="ttc" id="unionInstruction_html_abe0842841a99720d36796e4ab9baafe0"><div class="ttname"><a href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">Instruction::instr_immediate</a></div><div class="ttdeci">struct Instruction::@2 instr_immediate</div><div class="ttdoc">Format d&#39;une instruction à valeur immédiate. </div></div>
+<div class="ttc" id="unionInstruction_html_aa0cc705f1610955cf6ac0b15efbcca8a"><div class="ttname"><a href="unionInstruction.html#aa0cc705f1610955cf6ac0b15efbcca8a">Instruction::_value</a></div><div class="ttdeci">signed int _value</div><div class="ttdoc">Valeur immédiate. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00084">instruction.h:84</a></div></div>
+<div class="ttc" id="structMachine_html_ab4a927b1e214bd40d2406f1080eaa6c4"><div class="ttname"><a href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">Machine::_registers</a></div><div class="ttdeci">Word _registers[NREGISTERS]</div><div class="ttdoc">Registres généraux (accumulateurs) </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00084">machine.h:84</a></div></div>
+<div class="ttc" id="unionInstruction_html_a8f5f38c91d2c3443dcd962101bfe19e2"><div class="ttname"><a href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">Instruction::_regcond</a></div><div class="ttdeci">unsigned _regcond</div><div class="ttdoc">Numéro de registre ou condition. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00063">instruction.h:63</a></div></div>
+<div class="ttc" id="exec_8c_html_aee58f0bd338aac461910322697938e01"><div class="ttname"><a href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a></div><div class="ttdeci">bool is_immediate(Instruction instr, unsigned addr)</div><div class="ttdoc">Exécution des instructions pour la simulation du processeur. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00015">exec.c:15</a></div></div>
+<div class="ttc" id="exec_8c_html_affda555699481b52022b53823658784e"><div class="ttname"><a href="exec_8c.html#affda555699481b52022b53823658784e">change_cc</a></div><div class="ttdeci">void change_cc(Machine *pmach, unsigned int reg)</div><div class="ttdoc">Change la valeur de CC selon la valeur de reg. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00063">exec.c:63</a></div></div>
+<div class="ttc" id="structMachine_html_ac2949056c217e69a8efe6a114d2ac2b0"><div class="ttname"><a href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">Machine::_data</a></div><div class="ttdeci">Word * _data</div><div class="ttdoc">Mémoire de données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00076">machine.h:76</a></div></div>
+<div class="ttc" id="unionInstruction_html_a5903d65905a4fd4f8c917ed17d9d9211"><div class="ttname"><a href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a></div><div class="ttdeci">struct Instruction::@0 instr_generic</div><div class="ttdoc">Format générique : les premiers champs sont communs. </div></div>
+<div class="ttc" id="exec_8c_html_a259f1da450e59303ef7d8f555009d870"><div class="ttname"><a href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a></div><div class="ttdeci">void check_seg_data(Machine *pmach, unsigned int data_addr, unsigned addr)</div><div class="ttdoc">Vérifie qu&#39;il n&#39;y a pas d&#39;ERR_SEGDATA sur le tableau des données. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00052">exec.c:52</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a3ffc341e4de6e5d18c2aaa75bb1d1bd4_cgraph.png" border="0" usemap="#exec_8c_a3ffc341e4de6e5d18c2aaa75bb1d1bd4_cgraph" alt=""/></div>
+<map name="exec_8c_a3ffc341e4de6e5d18c2aaa75bb1d1bd4_cgraph" id="exec_8c_a3ffc341e4de6e5d18c2aaa75bb1d1bd4_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a3ffc341e4de6e5d18c2aaa75bb1d1bd4_icgraph.png" border="0" usemap="#exec_8c_a3ffc341e4de6e5d18c2aaa75bb1d1bd4_icgraph" alt=""/></div>
+<map name="exec_8c_a3ffc341e4de6e5d18c2aaa75bb1d1bd4_icgraph" id="exec_8c_a3ffc341e4de6e5d18c2aaa75bb1d1bd4_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aee15e6caec7d046384f6c7832fd5f8b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Décodage et exécution de l'instruction POP. Adresse absolue ou indexée.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00268">268</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00076">Machine::_data</a>, <a class="el" href="exec_8c_source.html#l00027">check_immediate()</a>, <a class="el" href="exec_8c_source.html#l00052">check_seg_data()</a>, <a class="el" href="exec_8c_source.html#l00105">check_stack()</a>, et <a class="el" href="exec_8c_source.html#l00038">get_address()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00279">decode_execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <a class="code" href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">check_immediate</a>(instr,addr); <span class="comment">// vérifie que l&#39;on est pas en immédiat, sinon erreur</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> address = <a class="code" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a>(pmach, instr);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a>(pmach, address, addr);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    ++pmach-&gt;_sp;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">check_stack</a>(pmach, addr);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[address] = pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[pmach-&gt;_sp]; <span class="comment">//On met la valeur de la pile dans Data</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_a1e5d79846ee7bfd563fb1b7939c7546b"><div class="ttname"><a href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a></div><div class="ttdeci">unsigned int get_address(Machine *pmach, Instruction instr)</div><div class="ttdoc">Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00038">exec.c:38</a></div></div>
+<div class="ttc" id="exec_8c_html_a8f3c7b86d834d27ad12ef08f7478ac57"><div class="ttname"><a href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">check_stack</a></div><div class="ttdeci">void check_stack(Machine *pmach, unsigned addr)</div><div class="ttdoc">Vérification que Stack Pointer (SP) ne dépasse pas la zone dédiée à la pile. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00105">exec.c:105</a></div></div>
+<div class="ttc" id="structMachine_html_ac2949056c217e69a8efe6a114d2ac2b0"><div class="ttname"><a href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">Machine::_data</a></div><div class="ttdeci">Word * _data</div><div class="ttdoc">Mémoire de données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00076">machine.h:76</a></div></div>
+<div class="ttc" id="exec_8c_html_a259f1da450e59303ef7d8f555009d870"><div class="ttname"><a href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a></div><div class="ttdeci">void check_seg_data(Machine *pmach, unsigned int data_addr, unsigned addr)</div><div class="ttdoc">Vérifie qu&#39;il n&#39;y a pas d&#39;ERR_SEGDATA sur le tableau des données. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00052">exec.c:52</a></div></div>
+<div class="ttc" id="exec_8c_html_aae6d0305934052f93dcb6cdce7d293bf"><div class="ttname"><a href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">check_immediate</a></div><div class="ttdeci">void check_immediate(Instruction instr, unsigned addr)</div><div class="ttdoc">Vérifie que l&#39;instruction n&#39;est pas en immédiate sinon erreur. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00027">exec.c:27</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_aee15e6caec7d046384f6c7832fd5f8b1_cgraph.png" border="0" usemap="#exec_8c_aee15e6caec7d046384f6c7832fd5f8b1_cgraph" alt=""/></div>
+<map name="exec_8c_aee15e6caec7d046384f6c7832fd5f8b1_cgraph" id="exec_8c_aee15e6caec7d046384f6c7832fd5f8b1_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_aee15e6caec7d046384f6c7832fd5f8b1_icgraph.png" border="0" usemap="#exec_8c_aee15e6caec7d046384f6c7832fd5f8b1_icgraph" alt=""/></div>
+<map name="exec_8c_aee15e6caec7d046384f6c7832fd5f8b1_icgraph" id="exec_8c_aee15e6caec7d046384f6c7832fd5f8b1_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ffee845fd1b2304ae12874ab95b13a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool push </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Décodage et exécution de l'instruction PUSH. Adresse immédiat, indexé et absolu.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00248">248</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00076">Machine::_data</a>, <a class="el" href="instruction_8h_source.html#l00084">Instruction::_value</a>, <a class="el" href="exec_8c_source.html#l00052">check_seg_data()</a>, <a class="el" href="exec_8c_source.html#l00105">check_stack()</a>, <a class="el" href="exec_8c_source.html#l00038">get_address()</a>, <a class="el" href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">Instruction::instr_immediate</a>, et <a class="el" href="exec_8c_source.html#l00015">is_immediate()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00279">decode_execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">check_stack</a>(pmach, addr);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a>(instr,addr)) { <span class="comment">// Si I = 1 : Immediat, on est en immediat, on push directement la valeur</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[pmach-&gt;_sp--] = instr.<a class="code" href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">instr_immediate</a>.<a class="code" href="unionInstruction.html#aa0cc705f1610955cf6ac0b15efbcca8a">_value</a>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    } <span class="keywordflow">else</span> { <span class="comment">// on récupère la valeur dans data et on la push</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> address = <a class="code" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a>(pmach, instr);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a>(pmach, address, addr);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[pmach-&gt;_sp--] = pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[address]; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_a1e5d79846ee7bfd563fb1b7939c7546b"><div class="ttname"><a href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a></div><div class="ttdeci">unsigned int get_address(Machine *pmach, Instruction instr)</div><div class="ttdoc">Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00038">exec.c:38</a></div></div>
+<div class="ttc" id="unionInstruction_html_abe0842841a99720d36796e4ab9baafe0"><div class="ttname"><a href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">Instruction::instr_immediate</a></div><div class="ttdeci">struct Instruction::@2 instr_immediate</div><div class="ttdoc">Format d&#39;une instruction à valeur immédiate. </div></div>
+<div class="ttc" id="unionInstruction_html_aa0cc705f1610955cf6ac0b15efbcca8a"><div class="ttname"><a href="unionInstruction.html#aa0cc705f1610955cf6ac0b15efbcca8a">Instruction::_value</a></div><div class="ttdeci">signed int _value</div><div class="ttdoc">Valeur immédiate. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00084">instruction.h:84</a></div></div>
+<div class="ttc" id="exec_8c_html_a8f3c7b86d834d27ad12ef08f7478ac57"><div class="ttname"><a href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">check_stack</a></div><div class="ttdeci">void check_stack(Machine *pmach, unsigned addr)</div><div class="ttdoc">Vérification que Stack Pointer (SP) ne dépasse pas la zone dédiée à la pile. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00105">exec.c:105</a></div></div>
+<div class="ttc" id="exec_8c_html_aee58f0bd338aac461910322697938e01"><div class="ttname"><a href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a></div><div class="ttdeci">bool is_immediate(Instruction instr, unsigned addr)</div><div class="ttdoc">Exécution des instructions pour la simulation du processeur. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00015">exec.c:15</a></div></div>
+<div class="ttc" id="structMachine_html_ac2949056c217e69a8efe6a114d2ac2b0"><div class="ttname"><a href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">Machine::_data</a></div><div class="ttdeci">Word * _data</div><div class="ttdoc">Mémoire de données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00076">machine.h:76</a></div></div>
+<div class="ttc" id="exec_8c_html_a259f1da450e59303ef7d8f555009d870"><div class="ttname"><a href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a></div><div class="ttdeci">void check_seg_data(Machine *pmach, unsigned int data_addr, unsigned addr)</div><div class="ttdoc">Vérifie qu&#39;il n&#39;y a pas d&#39;ERR_SEGDATA sur le tableau des données. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00052">exec.c:52</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-24-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a8ffee845fd1b2304ae12874ab95b13a3_cgraph.png" border="0" usemap="#exec_8c_a8ffee845fd1b2304ae12874ab95b13a3_cgraph" alt=""/></div>
+<map name="exec_8c_a8ffee845fd1b2304ae12874ab95b13a3_cgraph" id="exec_8c_a8ffee845fd1b2304ae12874ab95b13a3_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-25-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a8ffee845fd1b2304ae12874ab95b13a3_icgraph.png" border="0" usemap="#exec_8c_a8ffee845fd1b2304ae12874ab95b13a3_icgraph" alt=""/></div>
+<map name="exec_8c_a8ffee845fd1b2304ae12874ab95b13a3_icgraph" id="exec_8c_a8ffee845fd1b2304ae12874ab95b13a3_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acfdb4470feb4f92a231c3314185c9f4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ret </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Décodage et exécutution de l'instruction RET. RET est employé seul.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00234">234</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00076">Machine::_data</a>, <a class="el" href="machine_8h_source.html#l00082">Machine::_pc</a>, et <a class="el" href="exec_8c_source.html#l00105">check_stack()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00279">decode_execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                                                           {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    ++pmach-&gt;_sp;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">check_stack</a>(pmach, addr);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    pmach-&gt;<a class="code" href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">_pc</a> = pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[pmach-&gt;_sp]; <span class="comment">//retour à l&#39;endroit du programme on l&#39;on était avant le CALL</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_a8f3c7b86d834d27ad12ef08f7478ac57"><div class="ttname"><a href="exec_8c.html#a8f3c7b86d834d27ad12ef08f7478ac57">check_stack</a></div><div class="ttdeci">void check_stack(Machine *pmach, unsigned addr)</div><div class="ttdoc">Vérification que Stack Pointer (SP) ne dépasse pas la zone dédiée à la pile. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00105">exec.c:105</a></div></div>
+<div class="ttc" id="structMachine_html_a1b3345874b1ade4324f16f3e03944675"><div class="ttname"><a href="structMachine.html#a1b3345874b1ade4324f16f3e03944675">Machine::_pc</a></div><div class="ttdeci">unsigned _pc</div><div class="ttdoc">Compteur ordinal. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00082">machine.h:82</a></div></div>
+<div class="ttc" id="structMachine_html_ac2949056c217e69a8efe6a114d2ac2b0"><div class="ttname"><a href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">Machine::_data</a></div><div class="ttdeci">Word * _data</div><div class="ttdoc">Mémoire de données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00076">machine.h:76</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-26-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_acfdb4470feb4f92a231c3314185c9f4a_cgraph.png" border="0" usemap="#exec_8c_acfdb4470feb4f92a231c3314185c9f4a_cgraph" alt=""/></div>
+<map name="exec_8c_acfdb4470feb4f92a231c3314185c9f4a_cgraph" id="exec_8c_acfdb4470feb4f92a231c3314185c9f4a_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-27-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_acfdb4470feb4f92a231c3314185c9f4a_icgraph.png" border="0" usemap="#exec_8c_acfdb4470feb4f92a231c3314185c9f4a_icgraph" alt=""/></div>
+<map name="exec_8c_acfdb4470feb4f92a231c3314185c9f4a_icgraph" id="exec_8c_acfdb4470feb4f92a231c3314185c9f4a_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f4f15617a93854e66e215b1b5976385"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool store </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Décodage et exécution de l'instruction STORE. Adressage absolu et indexé pour la destination. Indiquer un registre pour la source.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00139">139</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00076">Machine::_data</a>, <a class="el" href="instruction_8h_source.html#l00063">Instruction::_regcond</a>, <a class="el" href="machine_8h_source.html#l00084">Machine::_registers</a>, <a class="el" href="exec_8c_source.html#l00027">check_immediate()</a>, <a class="el" href="exec_8c_source.html#l00052">check_seg_data()</a>, <a class="el" href="exec_8c_source.html#l00038">get_address()</a>, et <a class="el" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00279">decode_execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">check_immediate</a>(instr, addr); <span class="comment">// vérifie que l&#39;on est pas en immédiat, sinon erreur</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> address = <a class="code" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a>(pmach, instr);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a>(pmach, address, addr);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[address] = pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>]; <span class="comment">// on stocke la valeur du registre dans data</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_a1e5d79846ee7bfd563fb1b7939c7546b"><div class="ttname"><a href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a></div><div class="ttdeci">unsigned int get_address(Machine *pmach, Instruction instr)</div><div class="ttdoc">Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00038">exec.c:38</a></div></div>
+<div class="ttc" id="structMachine_html_ab4a927b1e214bd40d2406f1080eaa6c4"><div class="ttname"><a href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">Machine::_registers</a></div><div class="ttdeci">Word _registers[NREGISTERS]</div><div class="ttdoc">Registres généraux (accumulateurs) </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00084">machine.h:84</a></div></div>
+<div class="ttc" id="unionInstruction_html_a8f5f38c91d2c3443dcd962101bfe19e2"><div class="ttname"><a href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">Instruction::_regcond</a></div><div class="ttdeci">unsigned _regcond</div><div class="ttdoc">Numéro de registre ou condition. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00063">instruction.h:63</a></div></div>
+<div class="ttc" id="structMachine_html_ac2949056c217e69a8efe6a114d2ac2b0"><div class="ttname"><a href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">Machine::_data</a></div><div class="ttdeci">Word * _data</div><div class="ttdoc">Mémoire de données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00076">machine.h:76</a></div></div>
+<div class="ttc" id="unionInstruction_html_a5903d65905a4fd4f8c917ed17d9d9211"><div class="ttname"><a href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a></div><div class="ttdeci">struct Instruction::@0 instr_generic</div><div class="ttdoc">Format générique : les premiers champs sont communs. </div></div>
+<div class="ttc" id="exec_8c_html_a259f1da450e59303ef7d8f555009d870"><div class="ttname"><a href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a></div><div class="ttdeci">void check_seg_data(Machine *pmach, unsigned int data_addr, unsigned addr)</div><div class="ttdoc">Vérifie qu&#39;il n&#39;y a pas d&#39;ERR_SEGDATA sur le tableau des données. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00052">exec.c:52</a></div></div>
+<div class="ttc" id="exec_8c_html_aae6d0305934052f93dcb6cdce7d293bf"><div class="ttname"><a href="exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf">check_immediate</a></div><div class="ttdeci">void check_immediate(Instruction instr, unsigned addr)</div><div class="ttdoc">Vérifie que l&#39;instruction n&#39;est pas en immédiate sinon erreur. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00027">exec.c:27</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-28-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a4f4f15617a93854e66e215b1b5976385_cgraph.png" border="0" usemap="#exec_8c_a4f4f15617a93854e66e215b1b5976385_cgraph" alt=""/></div>
+<map name="exec_8c_a4f4f15617a93854e66e215b1b5976385_cgraph" id="exec_8c_a4f4f15617a93854e66e215b1b5976385_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-29-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a4f4f15617a93854e66e215b1b5976385_icgraph.png" border="0" usemap="#exec_8c_a4f4f15617a93854e66e215b1b5976385_icgraph" alt=""/></div>
+<map name="exec_8c_a4f4f15617a93854e66e215b1b5976385_icgraph" id="exec_8c_a4f4f15617a93854e66e215b1b5976385_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f80bd12c3f294a72d93d559f5c238ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Décodage et exécution de l'instruction SUB. Adressage immédiat, absolu et indexé pour la source. Indiquer un registre pour la destination.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmach</td><td>machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>instruction en cours </td></tr>
+    <tr><td class="paramname">addr</td><td>adresse de l'instruction en cours </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00177">177</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="machine_8h_source.html#l00076">Machine::_data</a>, <a class="el" href="instruction_8h_source.html#l00063">Instruction::_regcond</a>, <a class="el" href="machine_8h_source.html#l00084">Machine::_registers</a>, <a class="el" href="instruction_8h_source.html#l00084">Instruction::_value</a>, <a class="el" href="exec_8c_source.html#l00063">change_cc()</a>, <a class="el" href="exec_8c_source.html#l00052">check_seg_data()</a>, <a class="el" href="exec_8c_source.html#l00038">get_address()</a>, <a class="el" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a>, <a class="el" href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">Instruction::instr_immediate</a>, et <a class="el" href="exec_8c_source.html#l00015">is_immediate()</a>.</p>
+
+<p>Référencé par <a class="el" href="exec_8c_source.html#l00279">decode_execute()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a>(instr,addr)) { <span class="comment">// Si I = 1 : Immediat, on est en immediat, on enlève directement la valeur</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>] -= instr.<a class="code" href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">instr_immediate</a>.<a class="code" href="unionInstruction.html#aa0cc705f1610955cf6ac0b15efbcca8a">_value</a>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    } <span class="keywordflow">else</span> { <span class="comment">// on récupère la valeur dans data et on la soustrait</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> address = <a class="code" href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a>(pmach, instr);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a>(pmach, address, addr); </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>] -= pmach-&gt;<a class="code" href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">_data</a>[address];</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="exec_8c.html#affda555699481b52022b53823658784e">change_cc</a>(pmach,pmach-&gt;<a class="code" href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">_registers</a>[instr.<a class="code" href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">instr_generic</a>.<a class="code" href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">_regcond</a>]);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
+<div class="ttc" id="exec_8c_html_a1e5d79846ee7bfd563fb1b7939c7546b"><div class="ttname"><a href="exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b">get_address</a></div><div class="ttdeci">unsigned int get_address(Machine *pmach, Instruction instr)</div><div class="ttdoc">Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00038">exec.c:38</a></div></div>
+<div class="ttc" id="unionInstruction_html_abe0842841a99720d36796e4ab9baafe0"><div class="ttname"><a href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">Instruction::instr_immediate</a></div><div class="ttdeci">struct Instruction::@2 instr_immediate</div><div class="ttdoc">Format d&#39;une instruction à valeur immédiate. </div></div>
+<div class="ttc" id="unionInstruction_html_aa0cc705f1610955cf6ac0b15efbcca8a"><div class="ttname"><a href="unionInstruction.html#aa0cc705f1610955cf6ac0b15efbcca8a">Instruction::_value</a></div><div class="ttdeci">signed int _value</div><div class="ttdoc">Valeur immédiate. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00084">instruction.h:84</a></div></div>
+<div class="ttc" id="structMachine_html_ab4a927b1e214bd40d2406f1080eaa6c4"><div class="ttname"><a href="structMachine.html#ab4a927b1e214bd40d2406f1080eaa6c4">Machine::_registers</a></div><div class="ttdeci">Word _registers[NREGISTERS]</div><div class="ttdoc">Registres généraux (accumulateurs) </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00084">machine.h:84</a></div></div>
+<div class="ttc" id="unionInstruction_html_a8f5f38c91d2c3443dcd962101bfe19e2"><div class="ttname"><a href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">Instruction::_regcond</a></div><div class="ttdeci">unsigned _regcond</div><div class="ttdoc">Numéro de registre ou condition. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00063">instruction.h:63</a></div></div>
+<div class="ttc" id="exec_8c_html_aee58f0bd338aac461910322697938e01"><div class="ttname"><a href="exec_8c.html#aee58f0bd338aac461910322697938e01">is_immediate</a></div><div class="ttdeci">bool is_immediate(Instruction instr, unsigned addr)</div><div class="ttdoc">Exécution des instructions pour la simulation du processeur. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00015">exec.c:15</a></div></div>
+<div class="ttc" id="exec_8c_html_affda555699481b52022b53823658784e"><div class="ttname"><a href="exec_8c.html#affda555699481b52022b53823658784e">change_cc</a></div><div class="ttdeci">void change_cc(Machine *pmach, unsigned int reg)</div><div class="ttdoc">Change la valeur de CC selon la valeur de reg. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00063">exec.c:63</a></div></div>
+<div class="ttc" id="structMachine_html_ac2949056c217e69a8efe6a114d2ac2b0"><div class="ttname"><a href="structMachine.html#ac2949056c217e69a8efe6a114d2ac2b0">Machine::_data</a></div><div class="ttdeci">Word * _data</div><div class="ttdoc">Mémoire de données. </div><div class="ttdef"><b>Definition:</b> <a href="machine_8h_source.html#l00076">machine.h:76</a></div></div>
+<div class="ttc" id="unionInstruction_html_a5903d65905a4fd4f8c917ed17d9d9211"><div class="ttname"><a href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a></div><div class="ttdeci">struct Instruction::@0 instr_generic</div><div class="ttdoc">Format générique : les premiers champs sont communs. </div></div>
+<div class="ttc" id="exec_8c_html_a259f1da450e59303ef7d8f555009d870"><div class="ttname"><a href="exec_8c.html#a259f1da450e59303ef7d8f555009d870">check_seg_data</a></div><div class="ttdeci">void check_seg_data(Machine *pmach, unsigned int data_addr, unsigned addr)</div><div class="ttdoc">Vérifie qu&#39;il n&#39;y a pas d&#39;ERR_SEGDATA sur le tableau des données. </div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00052">exec.c:52</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-30-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a3f80bd12c3f294a72d93d559f5c238ca_cgraph.png" border="0" usemap="#exec_8c_a3f80bd12c3f294a72d93d559f5c238ca_cgraph" alt=""/></div>
+<map name="exec_8c_a3f80bd12c3f294a72d93d559f5c238ca_cgraph" id="exec_8c_a3f80bd12c3f294a72d93d559f5c238ca_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-31-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_a3f80bd12c3f294a72d93d559f5c238ca_icgraph.png" border="0" usemap="#exec_8c_a3f80bd12c3f294a72d93d559f5c238ca_icgraph" alt=""/></div>
+<map name="exec_8c_a3f80bd12c3f294a72d93d559f5c238ca_icgraph" id="exec_8c_a3f80bd12c3f294a72d93d559f5c238ca_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aae353f8fd7ccdbebd6c37fc0f75d12d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void trace </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structMachine.html">Machine</a> *&#160;</td>
+          <td class="paramname"><em>pmach</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unionInstruction.html">Instruction</a>&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trace de l'exécution. </p>
+<p>On écrit l'adresse et l'instruction sous forme lisible.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>le message de trace </td></tr>
+    <tr><td class="paramname">pmach</td><td>la machine en cours d'exécution </td></tr>
+    <tr><td class="paramname">instr</td><td>l'instruction à exécuter </td></tr>
+    <tr><td class="paramname">addr</td><td>son adresse </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="exec_8c_source.html#l00312">312</a> du fichier <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+<p>Références <a class="el" href="instruction_8c_source.html#l00032">print_instruction()</a>.</p>
+
+<p>Référencé par <a class="el" href="machine_8c_source.html#l00232">simul()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    printf(<span class="stringliteral">&quot;TRACE: %s: 0x%04x: &quot;</span>,msg, addr);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="instruction_8c.html#a437080d5e8c504588a47d0dba468492f">print_instruction</a>(instr, addr);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
+<div class="ttc" id="instruction_8c_html_a437080d5e8c504588a47d0dba468492f"><div class="ttname"><a href="instruction_8c.html#a437080d5e8c504588a47d0dba468492f">print_instruction</a></div><div class="ttdeci">void print_instruction(Instruction instr, unsigned addr)</div><div class="ttdoc">affiche une instruction sous forme lisible </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8c_source.html#l00032">instruction.c:32</a></div></div>
+</div><!-- fragment -->
+<p><div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Voici le graphe d'appel pour cette fonction :</div>
+<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-32-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_aae353f8fd7ccdbebd6c37fc0f75d12d3_cgraph.png" border="0" usemap="#exec_8c_aae353f8fd7ccdbebd6c37fc0f75d12d3_cgraph" alt=""/></div>
+<map name="exec_8c_aae353f8fd7ccdbebd6c37fc0f75d12d3_cgraph" id="exec_8c_aae353f8fd7ccdbebd6c37fc0f75d12d3_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Voici le graphe des appelants de cette fonction :</div>
+<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-33-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="exec_8c_aae353f8fd7ccdbebd6c37fc0f75d12d3_icgraph.png" border="0" usemap="#exec_8c_aae353f8fd7ccdbebd6c37fc0f75d12d3_icgraph" alt=""/></div>
+<map name="exec_8c_aae353f8fd7ccdbebd6c37fc0f75d12d3_icgraph" id="exec_8c_aae353f8fd7ccdbebd6c37fc0f75d12d3_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="exec_8c.html">exec.c</a></li>
+    <li class="footer">Généré le Vendredi 13 Juin 2014 14:13:56 pour Simulateur du jeu d&#39;instructions d&#39;un processeur simple par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+digraph "branch"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="branch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="check_condition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#a161ce21cc67c2921078bae84ed79774c",tooltip="Vérification de la condition de branchement. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8c.html#a531bb138b38aef758b45a442aa53938a",tooltip="Affichage d&#39;une erreur et fin du simulateur. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="check_immediate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#aae6d0305934052f93dcb6cdce7d293bf",tooltip="Vérifie que l&#39;instruction n&#39;est pas en immédiate sinon erreur. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="is_immediate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#aee58f0bd338aac461910322697938e01",tooltip="Exécution des instructions pour la simulation du processeur. "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="get_address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b",tooltip="Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. "];
+}

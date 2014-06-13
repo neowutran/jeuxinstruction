@@ -1,0 +1,17 @@
+digraph "sub"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sub",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="change_cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#affda555699481b52022b53823658784e",tooltip="Change la valeur de CC selon la valeur de reg. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="check_seg_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#a259f1da450e59303ef7d8f555009d870",tooltip="Vérifie qu&#39;il n&#39;y a pas d&#39;ERR_SEGDATA sur le tableau des données. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8c.html#a531bb138b38aef758b45a442aa53938a",tooltip="Affichage d&#39;une erreur et fin du simulateur. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="get_address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#a1e5d79846ee7bfd563fb1b7939c7546b",tooltip="Récupère l&#39;adresse réelle, à partir d&#39;un adressage indexé ou absolu. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="is_immediate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#aee58f0bd338aac461910322697938e01",tooltip="Exécution des instructions pour la simulation du processeur. "];
+}
