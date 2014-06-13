@@ -1,1 +1,1 @@
-make: Nothing to be done for 'all'.
+make: *** No rule to make target 'libsimul.a', needed by 'test_simul'.  Stop.

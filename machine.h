@@ -14,21 +14,21 @@
 #define NREGISTERS 16
 
 //! Code condition
-/*! 
+
+/*!
  * Le code condition donne le signe du résultat de la dernière instruction
- * arithmétique (addition, soustraction) exécutée par le processeur. 
+ * arithmétique (addition, soustraction) exécutée par le processeur.
  *
  * \note Dans un processeur réel, le code condition fait partie du mot
  * d'état du processeur. Il contient d'autres indications que le simple
  * signe du résultat : par exemple le fait qu'une retenue ait été générée
  * ou bien qu'un dépassement de capacité (\e overflow) se soit produit.
  */
-typedef enum 
-{
-    CC_U = 0,	//!< Signe du résultat inconnu
-    CC_Z,	//!< Résultat nul
-    CC_P,	//!< Résultat positif
-    CC_N,	//!< Résultat négatif
+typedef enum {
+    CC_U = 0, //!< Signe du résultat inconnu
+    CC_Z, //!< Résultat nul
+    CC_P, //!< Résultat positif
+    CC_N, //!< Résultat négatif
 } Condition_Code;
 
 //! Dernière valeur possible du code condition
@@ -38,8 +38,9 @@ static const unsigned LAST_CC = CC_N;
 static const unsigned MINSTACKSIZE = 10;
 
 //! Structure générale de la machine.
+
 /*!
- * Cette machine simple est composée de mémoire et d'un processeur. 
+ * Cette machine simple est composée de mémoire et d'un processeur.
  *
  * Pour simplifier, une adresse machine référence un mot de 32 bits (et non un
  * octet comme dans la plupart des machines actuelles !). La mémoire est
@@ -52,7 +53,7 @@ static const unsigned MINSTACKSIZE = 10;
  * dans le registre \c R15 (\c SP). Chacun de ces segments a une taille
  * maximale. En outre on conserve la taille utile de chaque segment.
  *
- * Le processeur comporte 
+ * Le processeur comporte
  *
  *   - un registre servant de <b>compteur ordinal</b>  (<em>program counter</em>)
  *   qui contient l'adresse (dans le segment de texte) de la prochaine
@@ -67,24 +68,23 @@ static const unsigned MINSTACKSIZE = 10;
  *   la pile d'exécution : il doit contenir en permanence l'adresse du
  *   sommet de pile (premier élément libre de la pile).
  */
-typedef struct
-{
+typedef struct {
     // Segments de mémoire
-    Instruction *_text;		//!< Mémoire pour les instructions
-    unsigned int _textsize;	//!< Taille utilisée pour les instructions
+    Instruction *_text; //!< Mémoire pour les instructions
+    unsigned int _textsize; //!< Taille utilisée pour les instructions
 
-    Word *_data;		//!< Mémoire de données
-    unsigned int _datasize;	//!< Taille utilisée pour les données
+    Word *_data; //!< Mémoire de données
+    unsigned int _datasize; //!< Taille utilisée pour les données
 
-    unsigned int _dataend;      //!< Première adresse libre après les données statiques
+    unsigned int _dataend; //!< Première adresse libre après les données statiques
 
     // Registres de l'unité centrale
-    unsigned _pc;		//!< Compteur ordinal
-    Condition_Code _cc;		//!< Code condition : signe de la dernière opération
-    Word _registers[NREGISTERS];//!< Registres généraux (accumulateurs)
+    unsigned _pc; //!< Compteur ordinal
+    Condition_Code _cc; //!< Code condition : signe de la dernière opération
+    Word _registers[NREGISTERS]; //!< Registres généraux (accumulateurs)
 
-//! Définition de _sp comme synonyme du registre R15    
-#   define _sp _registers[NREGISTERS - 1] 
+    //! Définition de _sp comme synonyme du registre R15
+#define _sp _registers[NREGISTERS - 1]
 } Machine;
 
 //! Chargement d'un programme
@@ -99,13 +99,13 @@ typedef struct
  * \param data le contenu initial du segment de texte
  */
 void load_program(Machine *pmach,
-                  unsigned textsize, Instruction text[textsize],
-                  unsigned datasize, Word data[datasize],  unsigned dataend);
+        unsigned textsize, Instruction text[textsize],
+        unsigned datasize, Word data[datasize], unsigned dataend);
 
 //! Lecture d'un programme depuis un fichier binaire
 /*!
  * Le fichier binaire a le format suivant :
- * 
+ *
  *    - 3 entiers non signés, la taille du segment de texte (\c textsize),
  *    celle du segment de données (\c datasize) et la première adresse libre de
  *    données (\c dataend) ;
@@ -123,8 +123,8 @@ void load_program(Machine *pmach,
  * \param programfile le nom du fichier binaire
  *
  */
-void read_program(Machine *mach, const char *programfile);  
- 
+void read_program(Machine *mach, const char *programfile);
+
 //! Affichage du programme et des données
 /*!
  * On affiche les instruction et les données en format hexadécimal, sous une
@@ -141,7 +141,7 @@ void dump_memory(Machine *pmach);
 //! Affichage des instructions du programme
 /*!
  * Les instructions sont affichées sous forme symbolique, précédées de leur adresse.
-.* 
+.*
  * \param pmach la machine en cours d'exécution
  */
 void print_program(Machine *pmach);
