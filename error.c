@@ -46,6 +46,7 @@ void error(Error err, unsigned addr){
 		default:
 			exit(0);
 		}
+		exit(0);
 		
 }
 
