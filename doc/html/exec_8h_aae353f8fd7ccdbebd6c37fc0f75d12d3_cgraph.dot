@@ -6,6 +6,4 @@ digraph "trace"
   Node1 [label="trace",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
   Node2 [label="print_instruction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$instruction_8c.html#a437080d5e8c504588a47d0dba468492f",tooltip="affiche une instruction sous forme lisible "];
-  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
-  Node3 [label="affichage_registre",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$instruction_8c.html#af0f58cfbd0ee82026e01d21fe68a3c4e"];
 }

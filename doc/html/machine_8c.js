@@ -6,5 +6,7 @@ var machine_8c =
     [ "print_data", "machine_8c.html#a549be6eaf631d871e9357513c748640d", null ],
     [ "print_program", "machine_8c.html#aba3ce4987ef379073d9d3f31debf89e7", null ],
     [ "read_program", "machine_8c.html#ac59b88844961c2479108151e24dd555a", null ],
-    [ "simul", "machine_8c.html#ad0bfa0ce7434b963eea888d7b847ac3b", null ]
+    [ "simul", "machine_8c.html#ad0bfa0ce7434b963eea888d7b847ac3b", null ],
+    [ "dataToFree", "machine_8c.html#aa3e0ffb193c1fffbe8973137ccf2181d", null ],
+    [ "instructionToFree", "machine_8c.html#a080612fa700f6ed6745dc1ed4785462e", null ]
 ];

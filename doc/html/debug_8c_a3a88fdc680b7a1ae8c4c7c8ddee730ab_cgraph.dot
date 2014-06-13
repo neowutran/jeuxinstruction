@@ -12,6 +12,4 @@ digraph "debug_ask"
   Node4 [label="print_program",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$machine_8c.html#aba3ce4987ef379073d9d3f31debf89e7",tooltip="Affichage des instructions du programme. "];
   Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
   Node5 [label="print_instruction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$instruction_8c.html#a437080d5e8c504588a47d0dba468492f",tooltip="affiche une instruction sous forme lisible "];
-  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
-  Node6 [label="affichage_registre",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$instruction_8c.html#af0f58cfbd0ee82026e01d21fe68a3c4e"];
 }
