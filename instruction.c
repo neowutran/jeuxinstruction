@@ -20,7 +20,7 @@ const char* condition_names[]={"NC","EQ","NE","GT","GE","LT","LE"};
 /*!
  *  \param instr l'instruction dont on veut afficher le registre
  */	
-void affichage_registre(Instruction instr){
+static void affichage_registre(Instruction instr){
 	printf("R%02d", (int) instr.instr_generic._regcond);
 }
 
