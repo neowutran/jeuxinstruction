@@ -6,6 +6,9 @@
 #include <stdio.h>
 #include "debug.h"
 
+Instruction* instructionToFree;
+Word * dataToFree;
+static int needFree = 0;
 //! Chargement d'un programme
 
 /*!
@@ -36,6 +39,15 @@ void load_program(Machine *pmach, unsigned textsize, Instruction text[textsize],
 }
 
 //! Lecture d'un programme depuis un fichier binaire
+
+static void free_memory() {
+
+    if (needFree == 1) {
+        free(instructionToFree);
+        free(dataToFree);
+    }
+
+}
 
 /*!
  * Le fichier binaire a le format suivant :
@@ -72,7 +84,7 @@ void read_program(Machine *mach, const char *programfile) {
     fread(&dataend, sizeof (unsigned int), 1, program);
 
     Instruction* text = malloc(sizeof (Instruction) * textsize);
-    Word *data = malloc(sizeof (Word) * textsize);
+    Word *data = malloc(sizeof (Word) * datasize);
 
     fread(text, sizeof (Instruction), textsize, program);
     fread(data, sizeof (Word), datasize, program);
@@ -81,6 +93,11 @@ void read_program(Machine *mach, const char *programfile) {
         exit(1);
     }
     fclose(program);
+
+    instructionToFree = text;
+    dataToFree = data;
+    needFree = 1;
+    atexit(free_memory);
 
     load_program(mach, textsize, text, datasize, data, dataend);
 
@@ -239,4 +256,5 @@ void simul(Machine *pmach, bool debug) {
             debug = debug_ask(pmach);
         }
     }
+
 }

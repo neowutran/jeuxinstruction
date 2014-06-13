@@ -1,0 +1,26 @@
+digraph "simul"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="simul",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="debug_ask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$debug_8c.html#a3a88fdc680b7a1ae8c4c7c8ddee730ab",tooltip="Dialogue de mise au point interactive pour l&#39;instruction courante. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="print_cpu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$machine_8c.html#a87cfff30238b966cfc3c0c416d7076e9",tooltip="Affichage des registres du CPU. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="print_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$machine_8c.html#a549be6eaf631d871e9357513c748640d",tooltip="Affichage des données du programme. "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="print_program",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$machine_8c.html#aba3ce4987ef379073d9d3f31debf89e7",tooltip="Affichage des instructions du programme. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="print_instruction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$instruction_8c.html#a437080d5e8c504588a47d0dba468492f",tooltip="affiche une instruction sous forme lisible "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="decode_execute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#a41471ced34d27777447c2609173af7de",tooltip="Décodage et exécution d&#39;une instruction. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8c.html#a531bb138b38aef758b45a442aa53938a",tooltip="Affichage d&#39;une erreur et fin du simulateur. "];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="warning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8c.html#aec2872edfc57849ea2557178dc2b2673",tooltip="Affichage d&#39;un avertissement. "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="trace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$exec_8c.html#aae353f8fd7ccdbebd6c37fc0f75d12d3",tooltip="Trace de l&#39;exécution. "];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
 <title>Simulateur du jeu d&#39;instructions d&#39;un processeur simple:  Fichier source de instruction.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -32,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.7 -->
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
@@ -67,8 +67,8 @@ $(document).ready(function(){initNavTree('instruction_8h_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="instruction_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _INSTRUCTION_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _INSTRUCTION_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _INSTRUCTION_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('instruction_8h_source.html','');});
 <div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6afeb01cb4572ba190cd7932e49446c480"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6afeb01cb4572ba190cd7932e49446c480">STORE</a></div><div class="ttdoc">Rangement du contenu d&#39;un registre. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00018">instruction.h:18</a></div></div>
 <div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6a061dcf4785583d8653942f2d252174fa"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6a061dcf4785583d8653942f2d252174fa">POP</a></div><div class="ttdoc">Dépilement de la pile d&#39;exécution. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00025">instruction.h:25</a></div></div>
 <div class="ttc" id="unionInstruction_html_abe0842841a99720d36796e4ab9baafe0"><div class="ttname"><a href="unionInstruction.html#abe0842841a99720d36796e4ab9baafe0">Instruction::instr_immediate</a></div><div class="ttdeci">struct Instruction::@2 instr_immediate</div><div class="ttdoc">Format d&#39;une instruction à valeur immédiate. </div></div>
-<div class="ttc" id="instruction_8h_html_ae5e0c6bef1ffc3adc867e3ea4b9a57c3"><div class="ttname"><a href="instruction_8h.html#ae5e0c6bef1ffc3adc867e3ea4b9a57c3">cop_names</a></div><div class="ttdeci">const char * cop_names[]</div><div class="ttdoc">Forme imprimable des codes opérations. </div></div>
+<div class="ttc" id="instruction_8h_html_ae5e0c6bef1ffc3adc867e3ea4b9a57c3"><div class="ttname"><a href="instruction_8h.html#ae5e0c6bef1ffc3adc867e3ea4b9a57c3">cop_names</a></div><div class="ttdeci">const char * cop_names[]</div><div class="ttdoc">Forme imprimable des codes opérations. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8c_source.html#l00013">instruction.c:13</a></div></div>
 <div class="ttc" id="unionInstruction_html_aa0cc705f1610955cf6ac0b15efbcca8a"><div class="ttname"><a href="unionInstruction.html#aa0cc705f1610955cf6ac0b15efbcca8a">Instruction::_value</a></div><div class="ttdeci">signed int _value</div><div class="ttdoc">Valeur immédiate. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00084">instruction.h:84</a></div></div>
 <div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8">Condition</a></div><div class="ttdeci">Condition</div><div class="ttdoc">Conditions. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00109">instruction.h:109</a></div></div>
 <div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8a3dbd1016ea99d087d747530418b89a01"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a3dbd1016ea99d087d747530418b89a01">NC</a></div><div class="ttdoc">Pas de condition (nrachement inconditionnel) </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00111">instruction.h:111</a></div></div>
@@ -186,10 +186,10 @@ $(document).ready(function(){initNavTree('instruction_8h_source.html','');});
 <div class="ttc" id="unionInstruction_html_a057a22a377dd83f2e63a8b6e34df7164"><div class="ttname"><a href="unionInstruction.html#a057a22a377dd83f2e63a8b6e34df7164">Instruction::_rindex</a></div><div class="ttdeci">unsigned _rindex</div><div class="ttdoc">Numéro du registre d&#39;index. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00094">instruction.h:94</a></div></div>
 <div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6aa2fd6bbb0c07e28e835ba595e64df78c"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6aa2fd6bbb0c07e28e835ba595e64df78c">HALT</a></div><div class="ttdoc">Arrêt (normal) du programme. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00026">instruction.h:26</a></div></div>
 <div class="ttc" id="unionInstruction_html_a8f5f38c91d2c3443dcd962101bfe19e2"><div class="ttname"><a href="unionInstruction.html#a8f5f38c91d2c3443dcd962101bfe19e2">Instruction::_regcond</a></div><div class="ttdeci">unsigned _regcond</div><div class="ttdoc">Numéro de registre ou condition. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00063">instruction.h:63</a></div></div>
-<div class="ttc" id="instruction_8h_html_a437080d5e8c504588a47d0dba468492f"><div class="ttname"><a href="instruction_8h.html#a437080d5e8c504588a47d0dba468492f">print_instruction</a></div><div class="ttdeci">void print_instruction(Instruction instr, unsigned addr)</div><div class="ttdoc">Impression d&#39;une instruction sous forme lisible (désassemblage) </div></div>
+<div class="ttc" id="instruction_8h_html_a437080d5e8c504588a47d0dba468492f"><div class="ttname"><a href="instruction_8h.html#a437080d5e8c504588a47d0dba468492f">print_instruction</a></div><div class="ttdeci">void print_instruction(Instruction instr, unsigned addr)</div><div class="ttdoc">Impression d&#39;une instruction sous forme lisible (désassemblage) </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8c_source.html#l00032">instruction.c:32</a></div></div>
 <div class="ttc" id="instruction_8h_html_ab6d907c41d48048e1eb203e15f2fc9a8a662ed4b51721a45f07d645d4ca099a61"><div class="ttname"><a href="instruction_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8a662ed4b51721a45f07d645d4ca099a61">LE</a></div><div class="ttdoc">Négatif ou null. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00117">instruction.h:117</a></div></div>
 <div class="ttc" id="unionInstruction_html_a350ef9c256c24b90297798b15164db13"><div class="ttname"><a href="unionInstruction.html#a350ef9c256c24b90297798b15164db13">Instruction::_immediate</a></div><div class="ttdeci">bool _immediate</div><div class="ttdoc">Adressage immédiat ? </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00061">instruction.h:61</a></div></div>
-<div class="ttc" id="instruction_8h_html_a4cf35570c7b75e596c642031544688e0"><div class="ttname"><a href="instruction_8h.html#a4cf35570c7b75e596c642031544688e0">condition_names</a></div><div class="ttdeci">const char * condition_names[]</div><div class="ttdoc">Forme imprimable des conditions. </div></div>
+<div class="ttc" id="instruction_8h_html_a4cf35570c7b75e596c642031544688e0"><div class="ttname"><a href="instruction_8h.html#a4cf35570c7b75e596c642031544688e0">condition_names</a></div><div class="ttdeci">const char * condition_names[]</div><div class="ttdoc">Forme imprimable des conditions. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8c_source.html#l00016">instruction.c:16</a></div></div>
 <div class="ttc" id="unionInstruction_html_a5903d65905a4fd4f8c917ed17d9d9211"><div class="ttname"><a href="unionInstruction.html#a5903d65905a4fd4f8c917ed17d9d9211">Instruction::instr_generic</a></div><div class="ttdeci">struct Instruction::@0 instr_generic</div><div class="ttdoc">Format générique : les premiers champs sont communs. </div></div>
 <div class="ttc" id="instruction_8h_html_a0b5b15ce5f3a75b5dd0de6643cd3d958"><div class="ttname"><a href="instruction_8h.html#a0b5b15ce5f3a75b5dd0de6643cd3d958">Word</a></div><div class="ttdeci">uint32_t Word</div><div class="ttdoc">Type d&#39;un mot de donnée. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00124">instruction.h:124</a></div></div>
 <div class="ttc" id="instruction_8h_html_a5ead9d7413d75b14e895c945daa82de6ab2510768eaba5e52ba71678e19a65464"><div class="ttname"><a href="instruction_8h.html#a5ead9d7413d75b14e895c945daa82de6ab2510768eaba5e52ba71678e19a65464">RET</a></div><div class="ttdoc">Retour de sous-programme. </div><div class="ttdef"><b>Definition:</b> <a href="instruction_8h_source.html#l00023">instruction.h:23</a></div></div>
@@ -205,9 +205,9 @@ $(document).ready(function(){initNavTree('instruction_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="instruction_8h.html">instruction.h</a></li>
-    <li class="footer">Généré le Mercredi 4 Juin 2014 08:58:05 pour Simulateur du jeu d&#39;instructions d&#39;un processeur simple par
+    <li class="footer">Généré le Vendredi 13 Juin 2014 15:25:07 pour Simulateur du jeu d&#39;instructions d&#39;un processeur simple par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
 </div>
 </body>
